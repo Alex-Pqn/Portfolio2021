@@ -1,0 +1,16 @@
+
+.home {
+    & article {
+        & button {
+            transition-property: all;
+            transition-duration: 100ms;
+            border: 5px solid rgb(90, 128, 255);
+            transform: scale(1);
+            &:hover {
+                transform: scale(.97);
+                border: 5px solid rgb(130, 159, 253);
+                opacity: .92;
+            }
+        }
+    }
+}

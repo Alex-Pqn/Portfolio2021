@@ -1,0 +1,18 @@
+
+body {
+    cursor: default;
+    margin-bottom: 1000px;
+    background-image: url("../../img/home.jpg");
+    background-repeat: no-repeat;
+    & h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding: 0;
+    }
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+    & li {
+        list-style-type: none;
+    }
+}

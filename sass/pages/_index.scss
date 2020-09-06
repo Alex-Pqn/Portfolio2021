@@ -1,0 +1,38 @@
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & article {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 1em;
+        padding: 50px 75px;
+        text-align: right;
+        margin-top: 110px;
+        & h1 {
+            text-align: left;
+            color: rgb(70, 113, 255);
+            font-size: 5em;
+            & span {
+                border-bottom: 3px solid rgb(120, 152, 255);
+                padding-bottom: 13px;
+            }
+        }
+        & h2 {
+            color: rgb(231, 237, 255);
+            text-align: left;
+            font-size: 4.3em;
+            padding-bottom: 17px;
+            margin: 25px 0 30px;
+            border-bottom: 1px solid rgba(185, 185, 185, 0.3);
+        }
+        & button {
+            padding: 14px 17px;
+            background-color: rgb(67, 99, 202);
+            border-radius: 2em;
+            color: rgb(228, 228, 228);
+            font-size: 1.25em;
+            cursor: pointer;
+        }
+    }
+}

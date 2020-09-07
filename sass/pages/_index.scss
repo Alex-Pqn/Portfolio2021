@@ -3,12 +3,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-image: url('../../img/home.jpg');
+    background-size: cover;
     & article {
         background-color: rgba(0, 0, 0, 0.1);
         border-radius: 1em;
         padding: 50px 75px;
         text-align: right;
         margin-top: 110px;
+        margin-bottom: 330px;
         & h1 {
             text-align: left;
             color: rgb(70, 113, 255);
@@ -33,6 +36,95 @@
             color: rgb(228, 228, 228);
             font-size: 1.25em;
             cursor: pointer;
+        }
+    }
+}
+
+.sep1 {
+    & .sep1__left, .sep1__right {
+        border-style: solid;
+        border-color: #242424 transparent transparent transparent;
+        background-color: rgb(247, 247, 247);
+        width: 0%;
+        margin: 0;
+        padding: 0;
+    }
+    & div {
+        display: flex;
+    }
+    &__main {
+        height: 35px;
+        margin: 0;
+        background-color: #242424;
+        border: none;
+    }
+    &__left {
+        border-width: 105px 953.7px 0 0;
+    }
+    &__right {
+        border-width: 105px 0 200px 953.7px;
+    }
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(247, 247, 247);
+    margin-top: -225px;
+    padding-bottom: 75px;
+    margin-bottom: 500px;
+    &__icon {
+        width: 100%;
+        text-align: center;
+        font-size: 4em;
+        margin-bottom: 50px;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        margin-right: 25px;
+        background-color: rgb(230, 230, 230);
+        border: 5px solid rgba(0, 0, 0, 0.2);
+        border-top-left-radius: 3em;
+        border-bottom-right-radius: 3em;
+        & img {
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            border-radius: 10em;
+        }
+    }
+    &__right {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 30%;
+        padding: 30px 50px;
+        background-color: rgb(235, 235, 235);
+        border: 3px solid rgba(0, 0, 0, 0.1);
+        border-top-right-radius: 3em;
+        border-bottom-left-radius: 3em;
+        &__title {
+            display: flex;
+            border-bottom: 1px solid black;
+            padding-bottom: 18px;
+            & h3 {
+                display: flex;
+                align-items: flex-end;
+                width: 50%;
+                font-size: 1.45em;
+            }
+            & i {
+                display: flex;
+                justify-content: flex-end;
+                width: 50%;
+                font-size: 2.8em;
+                color: rgba(0, 0, 0, 0.3)
+            }
+        }
+        & p {
+            font-size: 1.2em;
+            line-height: 37px;
         }
     }
 }

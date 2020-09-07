@@ -17,4 +17,4 @@ sass script : "npm install sass -g"
 prefix script : "npm install autoprefixer postcss postcss-cli -g"
 
 ### Start-up commands ###
-"node server", "run sass" and "run prefix"
+"run sass" and "run prefix"

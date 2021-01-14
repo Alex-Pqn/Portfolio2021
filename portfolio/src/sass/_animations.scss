@@ -1,0 +1,86 @@
+
+//animations declaration
+.wiggle-animation {
+  animation: wiggle_animation 150ms both cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+//keyframes declaration
+@keyframes wiggle_animation {
+  0% {
+    transform: rotate(.5deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  } 
+  75% {
+    transform: rotate(-2deg);
+  } 
+  100% {
+    transform: rotate(-.5deg);
+  } 
+}
+
+//home part
+.home {
+  button {
+    transition-property: all;
+    transition-duration: 100ms;
+    border: 5px solid rgb(90, 128, 255);
+    opacity: .85;
+    transform: scale(1);
+    &:hover {
+        opacity: 1;
+        transform: scale(.97);
+        border: 5px solid rgb(130, 159, 253);
+    }
+  }
+  header {
+    p a {
+      transition-property: all;
+      transition-duration: 350ms;
+      transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+      background-color: rgba(255, 255, 255, 0.1);
+      color: rgba(230, 230, 230, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      & span {
+        color: rgba(163, 184, 253, 0.9);
+      }
+      &:hover {
+        color: rgb(230, 230, 230);
+        border-top-left-radius: .75em;
+        border-bottom-right-radius: .75em;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        & span {
+          opacity: 1;
+        }
+      }
+    }
+    nav a {
+      position: relative;
+      display: inline-block;
+      color: rgb(240, 240, 240);
+      opacity: .9;
+      &:after {
+        transition-property: all;
+        transition-duration: 350ms;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 1.7px;
+        left: 50%;
+        position: absolute;
+        background: white;
+        width: 0;
+      }
+      &:hover:after {
+        width: 100%;
+        left: 0;
+      }
+      &:hover {
+        opacity: 1;
+        color: white;
+      }
+    }
+  }
+}

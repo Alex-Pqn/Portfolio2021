@@ -1,0 +1,21 @@
+
+//about part
+@mixin about-sep_l-r {
+  height: 125px;
+  width: 100%;
+  margin: 0;
+  border: none;
+  background-color: #242424;
+}
+
+@mixin about_l-r {
+  display: flex;
+  flex-direction: column;
+}
+
+//all parts
+@mixin flex-parts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

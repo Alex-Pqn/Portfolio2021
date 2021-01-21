@@ -22,51 +22,12 @@
 
 //header
 header {
-  p a {
-    transition-property: all;
-    transition-duration: 350ms;
-    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-    background-color: rgba(136, 136, 136, 0.267);
-    color: rgba(129, 129, 129, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    & span {
-      color: rgba(163, 184, 253, 0.9);
-    }
-    &:hover {
-      color: rgb(230, 230, 230);
-      border-top-left-radius: .75em;
-      border-bottom-right-radius: .75em;
-      background-color: rgba(255, 255, 255, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      & span {
-        opacity: 1;
-      }
-    }
-  }
   nav a {
-    position: relative;
-    display: inline-block;
-    color: rgb(165, 165, 165);
-    opacity: .9;
-    &:after {
+    color: rgb(153, 153, 153);
+    &:hover {
+      color: rgb(95, 95, 95);
       transition-property: all;
       transition-duration: 350ms;
-      bottom: 0;
-      content: "";
-      display: block;
-      height: 1.7px;
-      left: 50%;
-      position: absolute;
-      background: white;
-      width: 0;
-    }
-    &:hover:after {
-      width: 100%;
-      left: 0;
-    }
-    &:hover {
-      opacity: 1;
-      color: white;
     }
   }
 }

@@ -1,25 +1,4 @@
 
-//animations declaration
-.wiggle-animation {
-  animation: wiggle_animation 150ms both cubic-bezier(1, 0, 0, 1) infinite;
-}
-
-//keyframes declaration
-@keyframes wiggle_animation {
-  0% {
-    transform: rotate(.5deg);
-  }
-  25% {
-    transform: rotate(2deg);
-  } 
-  75% {
-    transform: rotate(-2deg);
-  } 
-  100% {
-    transform: rotate(-.5deg);
-  } 
-}
-
 //header
 header {
   nav a {

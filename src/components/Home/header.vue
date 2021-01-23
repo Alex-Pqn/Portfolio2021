@@ -86,7 +86,6 @@ header {
   z-index: 999;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.41em;
-  border-bottom: 1px solid $border_header_scrollbar;
   transition-property: all;
 
   // credit
@@ -112,21 +111,20 @@ header {
           padding-bottom: 5px;
         }
         span {
-          font-size: 1.35em;
+          font-size: 1.36em;
         }
       }
     }
   }
 }
 
-// presentation header
-#header-presentation {
-  background-color: rgb(255, 255, 255);
+// introduction header
+#header-introduction {
   position: absolute;
   width: 100%;
   opacity: 1;
   transition-duration: 2.7s;
-  border-top: 5px solid rgb(102, 31, 131);
+  border-top: 5px solid rgb(162, 73, 197);
   margin-top: -999px;
   animation: marginTop 2s;
   animation-fill-mode: forwards;
@@ -134,9 +132,16 @@ header {
 
   // nav
   nav {
-    color: black;
     ul li span {
-      color: rgb(133, 58, 163);
+      color: rgb(125, 54, 153);
+    }
+    a {
+      color: rgb(144, 70, 173);
+      &:hover {
+        opacity: 0.7;
+        transition-property: all;
+        transition-duration: 350ms;
+      }
     }
   }
 }
@@ -144,9 +149,13 @@ header {
 // fixed header
 #header-fixed {
   background-color: white;
+  border-bottom: 1px solid $border_header_scrollbar;
   position: fixed;
   width: 60%;
   opacity: 0;
   transition-duration: 500ms;
+  nav ul li a {
+    color: rgb(128, 128, 128);
+  }
 }
 </style>

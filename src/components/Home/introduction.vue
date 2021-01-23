@@ -1,29 +1,42 @@
 <template>
   <!-- introduction container -->
   <section class="introduction-container">
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
+    <!-- square rotations : background animation -->
+    <ul class="background-animation">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
 
     <!-- top -->
     <div class="introduction-container__top"></div>
 
     <!-- mid -->
     <div class="introduction-container__mid">
-      <!-- main animation -->
+      <!-- typed : main animation -->
       <div class="main-animation">
-        <!-- text -->
+        <!-- typed text -->
         <div class="main-animation__text">
           <h1 id="typed_h1"></h1>
           <h2 id="typed_h2"></h2>
           <h3 id="typed_h3"></h3>
-          <h4 id="typed_h4"></h4>
         </div>
         <!-- geometric shapes -->
         <div class="main-animation__shape-message"></div>
       </div>
+      <!-- dev typed text on left -->
+      <h4 id="typed_h4"></h4>
     </div>
 
     <!-- bot -->
@@ -78,7 +91,7 @@ export default {
     });
 
     new Typed("#typed_h4", {
-      strings: ["<span>Dév</span>eloppeur Web Junior"],
+      strings: ["Développeur Web Junior"],
       typeSpeed: 40,
       startDelay: 4075,
       showCursor: false
@@ -117,7 +130,7 @@ export default {
   }
 }
 
-@keyframes Gradient {
+@keyframes gradientBackground {
   0% {
     background-position: 0% 50%;
   }
@@ -126,16 +139,6 @@ export default {
   }
   100% {
     background-position: 0% 50%;
-  }
-}
-@keyframes cube {
-  from {
-    transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    opacity: 1;
-  }
-  to {
-    transform: scale(20) rotate(960deg) translate(-50%, -50%);
-    opacity: 0;
   }
 }
 
@@ -150,7 +153,7 @@ export default {
     rgb(225, 209, 226)
   );
   background-size: 400% 400%;
-  animation: Gradient 15s ease infinite;
+  animation: gradientBackground 15s ease infinite;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -171,6 +174,16 @@ export default {
     align-items: center;
     height: 75%;
     width: 100%;
+    // dev typed text on left
+    h4 {
+      position: absolute;
+      bottom: 130px;
+      left: 2px;
+      font-size: 1.3em;
+      letter-spacing: 3px;
+      color: rgb(148, 78, 175);
+      writing-mode: vertical-lr;
+    }
   }
 
   // bot
@@ -181,49 +194,6 @@ export default {
     height: 15%;
     width: 100%;
   }
-}
-
-.cube {
-  position: absolute;
-  top: 80vh;
-  left: 45vw;
-  width: 10px;
-  height: 10px;
-  border: solid 1px #a240af;
-  transform-origin: top left;
-  transform: scale(0) rotate(0deg) translate(-50%, -50%);
-  animation: cube 12s ease-in forwards infinite;
-}
-.cube:nth-child(1) {
-  animation-delay: 7s;
-}
-.cube:nth-child(2) {
-  animation-delay: 7s;
-  left: 25vw;
-  top: 40vh;
-}
-.cube:nth-child(3) {
-  border-color: #fff;
-  animation-delay: 7s;
-  left: 85vw;
-  top: 40vh;
-}
-.cube:nth-child(4) {
-  animation-delay: 9s;
-  left: 92vw;
-  top: 10vh;
-}
-.cube:nth-child(5) {
-  border-color: #fff;
-  animation-delay: 11s;
-  left: 10vw;
-  top: 85vh;
-}
-.cube:nth-child(6) {
-  border: solid 1px #a240af;
-  animation-delay: 13s;
-  left: 50vw;
-  top: 10vh;
 }
 
 // main animation
@@ -244,7 +214,7 @@ export default {
     margin-left: 10;
     h1 span,
     h3 span {
-      color: rgb(102, 31, 131);
+      color: rgb(156, 78, 187);
       opacity: 0;
       animation: opacityFade 2.5s;
       animation-fill-mode: forwards;
@@ -252,33 +222,19 @@ export default {
     }
     h1 {
       font-size: 8em;
+      color: rgb(156, 78, 187);
     }
     h2 {
       text-align: center;
-      line-height: 107px;
+      line-height: 120px;
+      color: rgb(170, 91, 201);
+      font-size: 5.9em;
     }
     h3 {
       text-align: right;
       padding-left: 10px;
-    }
-    h2,
-    h3 {
-      font-size: 5.8em;
-    }
-    h1,
-    h2,
-    h3 {
-      color: rgb(145, 64, 177);
-    }
-    h4 {
-      text-align: right;
-      font-size: 1.9em;
-      padding-top: 7px;
-      letter-spacing: 5px;
-      color: rgb(102, 31, 131);
-      & span {
-        border-bottom: 2px solid rgb(107, 34, 136);
-      }
+      color: rgb(162, 88, 190);
+      font-size: 5.65em;
     }
   }
 
@@ -299,7 +255,7 @@ export default {
     border: 2px solid $border_shape_message_introduction;
     position: relative;
     opacity: 0;
-    animation: opacityFade 9s;
+    animation: opacityFade 12s;
     animation-fill-mode: forwards;
     &:before {
       content: "";
@@ -314,7 +270,7 @@ export default {
         17% 75%,
         0% 75%
       );
-      background-color: white;
+      background-color: rgb(243, 240, 245);
       display: block;
       position: absolute;
       animation: heightFade 2.5s;
@@ -346,5 +302,142 @@ export default {
     width: 30px;
     color: rgb(141, 60, 207);
   }
+}
+
+@keyframes squareRotations {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+// background animation
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    animation: squareRotations 20s linear infinite;
+    bottom: -150px;
+  }
+}
+.background-animation li:nth-child(1) {
+  background: rgba(167, 53, 202, 0.3);
+  left: 20%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 8s;
+}
+.background-animation li:nth-child(2) {
+  background: rgba(143, 59, 168, 0.2);
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 11s;
+  animation-duration: 12s;
+}
+.background-animation li:nth-child(3) {
+  background: rgba(175, 61, 209, 0.3);
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 15s;
+}
+.background-animation li:nth-child(4) {
+  background: rgba(169, 69, 199, 0.2);
+  left: 27%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 10s;
+  animation-duration: 24s;
+}
+.background-animation li:nth-child(5) {
+  background: rgba(146, 56, 173, 0.1);
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 8s;
+}
+.background-animation li:nth-child(6) {
+  background: rgba(167, 69, 197, 0.25);
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 12s;
+}
+.background-animation li:nth-child(7) {
+  background: rgba(160, 62, 190, 0.2);
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 16s;
+}
+.background-animation li:nth-child(8) {
+  background: rgba(172, 56, 207, 0.3);
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 24s;
+  animation-duration: 45s;
+}
+.background-animation li:nth-child(9) {
+  background: rgba(152, 61, 180, 0.4);
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 11s;
+  animation-duration: 35s;
+}
+.background-animation li:nth-child(10) {
+  background: rgba(185, 82, 216, 0.2);
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 9s;
+  animation-duration: 14s;
+}
+.background-animation li:nth-child(11) {
+  background: rgba(158, 55, 189, 0.2);
+  left: 85%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 28s;
+  animation-duration: 14s;
+}
+.background-animation li:nth-child(12) {
+  background: rgba(135, 50, 161, 0.4);
+  left: 55%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 19s;
+  animation-duration: 35s;
+}
+.background-animation li:nth-child(13) {
+  background: rgba(135, 55, 160, 0.2);
+  left: 15%;
+  width: 65px;
+  height: 65px;
+  animation-delay: 12s;
+}
+.background-animation li:nth-child(14) {
+  background: rgba(160, 59, 190, 0.1);
+  left: 65%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 15s;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <!-- headers -->
-  <headerComponent :id="'header-presentation'" />
+  <!-- fixed header -->
   <headerComponent :id="'header-fixed'" />
 
   <!-- introduction part -->
+  <headerComponent :id="'header-introduction'" />
   <introductionComponent />
 </template>
 

@@ -45,7 +45,7 @@ export default {
 
     // fixed header
     function displayFixedHeader() {
-      const headerDisplayDistance = 200;
+      const headerDisplayDistance = 1000;
       const headerElement = document.querySelector("#header-fixed");
 
       if (
@@ -124,11 +124,11 @@ header {
   width: 100%;
   opacity: 1;
   transition-duration: 2.7s;
-  border-top: 5px solid rgb(162, 73, 197);
+  border-top: 5px solid rgb(144, 62, 177);
   margin-top: -999px;
   animation: marginTop 2s;
   animation-fill-mode: forwards;
-  animation-delay: 7s;
+  animation-delay: 4.7s;
 
   // nav
   nav {

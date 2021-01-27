@@ -26,17 +26,19 @@
     <div class="introduction-container__mid">
       <!-- typed : main animation -->
       <div class="main-animation">
-        <!-- typed text -->
-        <div class="main-animation__text">
-          <h1 id="typed_h1"></h1>
-          <h2 id="typed_h2"></h2>
-          <h3 id="typed_h3"></h3>
-        </div>
         <!-- geometric shapes -->
-        <div class="main-animation__shape-message"></div>
+        <div class="main-animation__shape-message">
+          <!-- typed text -->
+          <div class="main-animation__text">
+            <h1 id="typed_h1"></h1>
+            <h2 id="typed_h2"></h2>
+            <h3 id="typed_h3"></h3>
+            <h4 id="typed_h4"></h4>
+          </div>
+        </div>
       </div>
       <!-- dev typed text on left -->
-      <h4 id="typed_h4"></h4>
+      <h5 id="typed_h5"></h5>
     </div>
 
     <!-- bot -->
@@ -45,9 +47,7 @@
       <div class="redirect-about">
         <p>
           <a href="#about">
-            <span>
-              Laissez-moi
-            </span>
+            Laissez-moi
           </a>
           me présenter
         </p>
@@ -70,30 +70,35 @@ import Typed from "typed.js";
 export default {
   name: "introduction",
   mounted() {
+    // typed js
     new Typed("#typed_h1", {
-      strings: ['<span>"</span>Bonjour,'],
+      strings: ["Bonjour,"],
       typeSpeed: 70,
       showCursor: false
     });
-
     new Typed("#typed_h2", {
       strings: ["Je suis"],
       typeSpeed: 80,
       startDelay: 1400,
       showCursor: false
     });
-
     new Typed("#typed_h3", {
-      strings: ['Alexandre Paquien<span>"</span>'],
+      strings: ["Alexandre"],
       typeSpeed: 60,
       startDelay: 2150,
       showCursor: false
     });
 
     new Typed("#typed_h4", {
+      strings: ["Paquien"],
+      typeSpeed: 60,
+      startDelay: 3050,
+      showCursor: false
+    });
+    new Typed("#typed_h5", {
       strings: ["Développeur Web Junior"],
       typeSpeed: 40,
-      startDelay: 4075,
+      startDelay: 8000,
       showCursor: false
     });
   }
@@ -103,24 +108,23 @@ export default {
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 
-@keyframes widthFade {
+@keyframes backgroundFade {
   from {
-    width: 0;
+    border: 2px solid rgba(255, 255, 255, 0);
   }
   to {
-    width: 100%;
+    border: 2px solid $border_shape_message_introduction;
+    background-color: $border_shape_message_introduction;
   }
 }
-
 @keyframes heightFade {
   from {
     height: 0;
   }
   to {
-    height: 96%;
+    height: 95%;
   }
 }
-
 @keyframes opacityFade {
   from {
     opacity: 0;
@@ -129,7 +133,6 @@ export default {
     opacity: 1;
   }
 }
-
 @keyframes gradientBackground {
   0% {
     background-position: 0% 50%;
@@ -153,7 +156,7 @@ export default {
     rgb(225, 209, 226)
   );
   background-size: 400% 400%;
-  animation: gradientBackground 15s ease infinite;
+  animation: gradientBackground 5s ease infinite;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -163,7 +166,7 @@ export default {
 
   // top
   &__top {
-    height: 10%;
+    height: 7%;
     width: 100%;
   }
 
@@ -172,17 +175,17 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75%;
+    height: 81%;
     width: 100%;
     // dev typed text on left
-    h4 {
+    h5 {
       position: absolute;
-      bottom: 130px;
-      left: 2px;
-      font-size: 1.3em;
-      letter-spacing: 3px;
+      z-index: 999;
+      left: 3px;
+      font-size: 1.2em;
+      letter-spacing: 2px;
       color: rgb(148, 78, 175);
-      writing-mode: vertical-lr;
+      writing-mode: vertical-rl;
     }
   }
 
@@ -190,8 +193,9 @@ export default {
   &__bot {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    height: 15%;
+    align-items: center;
+    flex-direction: column;
+    height: 12%;
     width: 100%;
   }
 }
@@ -205,43 +209,45 @@ export default {
   // text
   &__text {
     position: absolute;
-    z-index: 10;
-    height: 433px;
-    width: 701px;
-    margin-bottom: 175px;
+    z-index: 5;
     font-family: "Amatic SC", cursive;
     letter-spacing: 10px;
-    margin-left: 10;
-    h1 span,
-    h3 span {
-      color: rgb(156, 78, 187);
-      opacity: 0;
-      animation: opacityFade 2.5s;
-      animation-fill-mode: forwards;
-      animation-delay: 13s;
+    width: 100%;
+    color: rgb(169, 90, 201);
+
+    h1,
+    h2,
+    h3 {
+      text-align: center;
     }
+
     h1 {
-      font-size: 8em;
-      color: rgb(156, 78, 187);
+      font-size: 6em;
     }
     h2 {
-      text-align: center;
-      line-height: 120px;
-      color: rgb(170, 91, 201);
-      font-size: 5.9em;
+      line-height: 85px;
+      font-size: 4.9em;
     }
     h3 {
-      text-align: right;
-      padding-left: 10px;
-      color: rgb(162, 88, 190);
-      font-size: 5.65em;
+      font-size: 4.7em;
+    }
+    h4 {
+      position: absolute;
+      writing-mode: vertical-lr;
+      opacity: 0.5;
+      font-size: 2em;
+      right: 0;
+      bottom: 5px;
     }
   }
 
   // geometric shapes
   &__shape-message {
+    position: relative;
     width: 370px;
     height: 450px;
+    animation: backgroundFade 16s;
+    animation-fill-mode: forwards;
     clip-path: polygon(
       0% 0%,
       100% 0%,
@@ -251,16 +257,16 @@ export default {
       17% 75%,
       0% 75%
     );
-    background-color: $border_shape_message_introduction;
-    border: 2px solid $border_shape_message_introduction;
-    position: relative;
-    opacity: 0;
-    animation: opacityFade 12s;
-    animation-fill-mode: forwards;
     &:before {
       content: "";
+      display: block;
+      position: absolute;
+      background-color: rgb(243, 240, 245);
       width: 366px;
       z-index: 5;
+      animation: heightFade 2.5s;
+      animation-fill-mode: forwards;
+      animation-delay: 4.2s;
       clip-path: polygon(
         0% 0%,
         100% 0%,
@@ -270,12 +276,6 @@ export default {
         17% 75%,
         0% 75%
       );
-      background-color: rgb(243, 240, 245);
-      display: block;
-      position: absolute;
-      animation: heightFade 2.5s;
-      animation-fill-mode: forwards;
-      animation-delay: 6.8s;
     }
   }
 }
@@ -283,16 +283,15 @@ export default {
 // redirect about
 .redirect-about {
   text-align: center;
-  font-size: 1.2em;
-  margin-bottom: 15px;
   opacity: 0;
+  font-size: 1.2em;
   animation: opacityFade 1.5s;
   animation-fill-mode: forwards;
-  animation-delay: 8.15s;
+  animation-delay: 6.2s;
 
   p {
     color: rgb(88, 88, 88);
-    span {
+    a {
       border-bottom: 1px solid rgb(119, 119, 119);
       color: rgb(68, 68, 68);
     }
@@ -304,6 +303,7 @@ export default {
   }
 }
 
+// background animation
 @keyframes squareRotations {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -317,7 +317,6 @@ export default {
   }
 }
 
-// background animation
 .background-animation {
   position: absolute;
   top: 0;
@@ -325,6 +324,11 @@ export default {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  opacity: 0;
+  animation: opacityFade;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  animation-delay: 5.5s;
   li {
     position: absolute;
     display: block;
@@ -340,14 +344,13 @@ export default {
   left: 20%;
   width: 80px;
   height: 80px;
-  animation-delay: 8s;
 }
 .background-animation li:nth-child(2) {
   background: rgba(143, 59, 168, 0.2);
   left: 10%;
   width: 20px;
   height: 20px;
-  animation-delay: 11s;
+  animation-delay: 3s;
   animation-duration: 12s;
 }
 .background-animation li:nth-child(3) {
@@ -355,14 +358,14 @@ export default {
   left: 70%;
   width: 20px;
   height: 20px;
-  animation-delay: 15s;
+  animation-delay: 7s;
 }
 .background-animation li:nth-child(4) {
   background: rgba(169, 69, 199, 0.2);
   left: 27%;
   width: 60px;
   height: 60px;
-  animation-delay: 10s;
+  animation-delay: 2s;
   animation-duration: 24s;
 }
 .background-animation li:nth-child(5) {
@@ -370,28 +373,27 @@ export default {
   left: 65%;
   width: 20px;
   height: 20px;
-  animation-delay: 8s;
 }
 .background-animation li:nth-child(6) {
   background: rgba(167, 69, 197, 0.25);
   left: 75%;
   width: 110px;
   height: 110px;
-  animation-delay: 12s;
+  animation-delay: 4s;
 }
 .background-animation li:nth-child(7) {
   background: rgba(160, 62, 190, 0.2);
   left: 35%;
   width: 150px;
   height: 150px;
-  animation-delay: 16s;
+  animation-delay: 8s;
 }
 .background-animation li:nth-child(8) {
   background: rgba(172, 56, 207, 0.3);
   left: 50%;
   width: 25px;
   height: 25px;
-  animation-delay: 24s;
+  animation-delay: 16s;
   animation-duration: 45s;
 }
 .background-animation li:nth-child(9) {
@@ -399,7 +401,7 @@ export default {
   left: 20%;
   width: 15px;
   height: 15px;
-  animation-delay: 11s;
+  animation-delay: 3s;
   animation-duration: 35s;
 }
 .background-animation li:nth-child(10) {
@@ -407,7 +409,7 @@ export default {
   left: 85%;
   width: 150px;
   height: 150px;
-  animation-delay: 9s;
+  animation-delay: 1s;
   animation-duration: 14s;
 }
 .background-animation li:nth-child(11) {
@@ -415,7 +417,7 @@ export default {
   left: 85%;
   width: 80px;
   height: 80px;
-  animation-delay: 28s;
+  animation-delay: 20s;
   animation-duration: 14s;
 }
 .background-animation li:nth-child(12) {
@@ -423,7 +425,7 @@ export default {
   left: 55%;
   width: 30px;
   height: 30px;
-  animation-delay: 19s;
+  animation-delay: 11s;
   animation-duration: 35s;
 }
 .background-animation li:nth-child(13) {
@@ -431,13 +433,13 @@ export default {
   left: 15%;
   width: 65px;
   height: 65px;
-  animation-delay: 12s;
+  animation-delay: 4s;
 }
 .background-animation li:nth-child(14) {
   background: rgba(160, 59, 190, 0.1);
   left: 65%;
   width: 15px;
   height: 15px;
-  animation-delay: 15s;
+  animation-delay: 7s;
 }
 </style>

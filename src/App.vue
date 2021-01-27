@@ -17,6 +17,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   cursor: default;
   a {
@@ -26,10 +30,9 @@ body {
   li {
     list-style-type: none;
   }
-  button, input[type="button"] {
-    outline:none;
+  button,
+  input[type="button"] {
+    outline: none;
   }
 }
-
-
 </style>

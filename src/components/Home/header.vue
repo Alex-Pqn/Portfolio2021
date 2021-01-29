@@ -12,10 +12,13 @@
           <a href="#about"> <span>à</span> propos </a>
         </li>
         <li>
-          <a href="#portfolio"> <span>P</span>ortfolio </a>
+          <a href="#skill"> <span>C</span>ompétences </a>
         </li>
         <li>
           <a href="#formation"> <span>F</span>ormation </a>
+        </li>
+        <li>
+          <a href="#portfolio"> <span>P</span>ortfolio </a>
         </li>
         <li>
           <a href="#cv">
@@ -45,7 +48,7 @@ export default {
 
     // fixed header
     function displayFixedHeader() {
-      const headerDisplayDistance = 1000;
+      const headerDisplayDistance = 700;
       const headerElement = document.querySelector("#header-fixed");
 
       if (
@@ -154,6 +157,7 @@ header {
   width: 60%;
   opacity: 0;
   transition-duration: 500ms;
+
   nav ul li a {
     color: rgb(128, 128, 128);
   }

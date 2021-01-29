@@ -149,14 +149,9 @@ export default {
 .introduction-container {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
-    132deg,
-    rgb(255, 255, 255),
-    rgb(232, 222, 233),
-    rgb(225, 209, 226)
-  );
+  background: linear-gradient(132deg, rgb(255, 255, 255), rgb(223, 206, 224));
   background-size: 400% 400%;
-  animation: gradientBackground 5s ease infinite;
+  animation: gradientBackground 10s ease infinite;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -261,7 +256,7 @@ export default {
       content: "";
       display: block;
       position: absolute;
-      background-color: rgb(243, 240, 245);
+      background-color: rgb(250, 250, 250);
       width: 366px;
       z-index: 5;
       animation: heightFade 2.5s;

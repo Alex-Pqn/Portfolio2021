@@ -8,19 +8,24 @@
 
   <!-- about part -->
   <aboutComponent />
+
+  <!-- portfolio part -->
+  <skillComponent />
 </template>
 
 <script>
 import introductionComponent from "@/components/Home/introduction.vue";
 import headerComponent from "@/components/Home/header.vue";
 import aboutComponent from "@/components/Home/about.vue";
+import skillComponent from "@/components/Home/skill.vue";
 
 export default {
   name: "Home",
   components: {
     introductionComponent,
     headerComponent,
-    aboutComponent
+    aboutComponent,
+    skillComponent
   }
 };
 </script>

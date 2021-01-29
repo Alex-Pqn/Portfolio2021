@@ -1,5 +1,5 @@
 <template>
-  <section class="about-container">
+  <section id="about" class="about-container">
     <!-- profile pic -->
     <div class="profile-pic">
       <img src="@/assets/testimg.png" alt="" />
@@ -7,9 +7,8 @@
 
     <!-- presentation -->
     <div class="presentation">
-      <!-- start quote icon -->
+      <!-- quote icon -->
       <svg
-        id="start-quote"
         aria-hidden="true"
         focusable="false"
         data-prefix="fas"
@@ -23,29 +22,16 @@
       </svg>
 
       <!-- text -->
-      <p>
-        Dynamique, motivé et appliqué, je touche à l'univers du Développement
-        Web depuis maintenant plus d'un an.
-      </p>
-      <p>
-        Diplômé il y a quelques mois, je m'efforce de me spécialier dans les
-        technologies et frameworks du front-end.
-      </p>
-
-      <!-- end quote icon -->
-      <svg
-        id="end-quote"
-        aria-hidden="true"
-        focusable="false"
-        data-prefix="fas"
-        data-icon="quote-right"
-        role="img"
-        viewBox="0 0 512 512"
-      >
-        <path
-          d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"
-        ></path>
-      </svg>
+      <div class="presentation__text">
+        <p>
+          <span>D</span>ynamique, motivé et appliqué, je touche à l'univers du
+          Développement Web depuis maintenant plus d'un an.
+        </p>
+        <p>
+          Diplômé il y a quelques mois, je m'efforce de me spécialier dans les
+          technologies et frameworks du front-end.
+        </p>
+      </div>
     </div>
   </section>
 </template>
@@ -58,14 +44,64 @@ export default {
 
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@300&display=swap");
 
 // about container
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $background_about-part;
-  padding: 35px 0;
+  padding-top: 25px;
+  background-image: radial-gradient(
+      circle at 13% 47%,
+      rgba(140, 140, 140, 0.03) 0%,
+      rgba(140, 140, 140, 0.03) 25%,
+      transparent 25%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 28% 63%,
+      rgba(170, 90, 201, 0.267) 0%,
+      rgba(170, 90, 201, 0.055) 16%,
+      transparent 16%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 81% 56%,
+      rgba(170, 57, 214, 0.089) 0%,
+      rgba(179, 37, 235, 0.075) 12%,
+      transparent 12%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 26% 48%,
+      rgba(192, 132, 216, 0.288) 0%,
+      rgba(195, 126, 223, 0.123) 6%,
+      transparent 6%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 97% 17%,
+      rgba(150, 150, 150, 0.03) 0%,
+      rgba(150, 150, 150, 0.03) 56%,
+      transparent 56%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(182, 11, 250, 0.11) 0%,
+      rgba(95, 8, 129, 0.068) 36%,
+      transparent 36%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 55% 52%,
+      rgba(170, 90, 201, 0.178) 0%,
+      rgba(170, 90, 201, 0.144) 6%,
+      transparent 6%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
 // profile pic
@@ -74,7 +110,7 @@ export default {
   justify-content: flex-end;
   padding-right: 50px;
   img {
-    height: 550px;
+    height: 585px;
   }
 }
 
@@ -84,26 +120,29 @@ export default {
   width: 25%;
   padding-left: 50px;
 
-  p {
-    line-height: 50px;
-    font-size: 2em;
-    font-family: "Roboto", sans-serif;
+  // text
+  &__text {
+    padding: 3px 6px 3px 17px;
+    background-color: rgba(190, 121, 218, 0.15);
+    border-radius: 0.5em;
+    p {
+      line-height: 50px;
+      margin: 7px 0;
+      font-size: 1.9em;
+      font-family: "Yantramanav", sans-serif;
+      color: rgba(62, 0, 112, 0.8);
+      span {
+        font-size: 1.5em;
+      }
+    }
   }
 
-  // container quotes
+  // quote icon
   svg {
     position: absolute;
-    fill: rgba(134, 0, 0, 0.2);
-    width: 75px;
-  }
-  // start quote
-  #start-quote {
-    margin: -20px 0 0 -30px;
-  }
-  // end quote
-  #end-quote {
-    right: 35px;
-    margin-top: -50px;
+    fill: rgba(190, 114, 219, 0.35);
+    width: 90px;
+    margin: -25px 0 0 -32px;
   }
 }
 </style>

@@ -22,8 +22,8 @@
     <!-- top -->
     <div class="introduction-container__top"></div>
 
-    <!-- mid -->
-    <div class="introduction-container__mid">
+    <!-- middle -->
+    <div class="introduction-container__middle">
       <!-- typed : main animation -->
       <div class="main-animation">
         <!-- geometric shapes -->
@@ -41,8 +41,8 @@
       <h5 id="typed_h5"></h5>
     </div>
 
-    <!-- bot -->
-    <div class="introduction-container__bot">
+    <!-- bottom -->
+    <div class="introduction-container__bottom">
       <!-- redirect about -->
       <div class="redirect-about">
         <p>
@@ -165,8 +165,8 @@ export default {
     width: 100%;
   }
 
-  // mid
-  &__mid {
+  // middle
+  &__middle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,8 +184,8 @@ export default {
     }
   }
 
-  // bot
-  &__bot {
+  // bottom
+  &__bottom {
     display: flex;
     justify-content: center;
     align-items: center;

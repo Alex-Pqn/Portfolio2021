@@ -22,7 +22,9 @@
         </li>
         <li>
           <a href="#cv">
-            <span>CV</span>
+            <span>
+              CV
+            </span>
           </a>
         </li>
         <li>
@@ -113,9 +115,6 @@ header {
         a {
           padding-bottom: 5px;
         }
-        span {
-          font-size: 1.36em;
-        }
       }
     }
   }
@@ -137,6 +136,7 @@ header {
   nav {
     ul li span {
       color: rgb(125, 54, 153);
+      font-size: 1.36em;
     }
     a {
       color: rgb(144, 70, 173);
@@ -158,8 +158,13 @@ header {
   opacity: 0;
   transition-duration: 500ms;
 
-  nav ul li a {
-    color: rgb(128, 128, 128);
+  nav ul li {
+    a {
+      color: rgb(128, 128, 128);
+    }
+    span {
+      font-size: 1.1em;
+    }
   }
 }
 </style>

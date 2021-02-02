@@ -226,10 +226,7 @@ export default {
 // skill container
 .skill {
   text-align: center;
-  height: 100vh;
-  padding: 30px 0;
-  border-top: 7px solid $border_skill-part;
-  border-bottom: 7px solid $border_skill-part;
+  scroll-margin-top: 3rem;
   font-family: "Syne", sans-serif;
   background-image: radial-gradient(
       circle at 13% 47%,

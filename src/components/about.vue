@@ -65,6 +65,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: 10rem;
   padding-top: 25px;
   background-image: radial-gradient(
       circle at 28% 63%,

@@ -114,6 +114,11 @@
         </div>
       </div>
     </article>
+
+    <div
+      style="clip-path: polygon(50% 35%, 0% 100%, 100% 100%)"
+      class="skill__end-shape"
+    ></div>
   </section>
 </template>
 
@@ -365,6 +370,15 @@ export default {
       color: rgba(96, 34, 102, 0.25);
       padding: 0 10px;
     }
+  }
+
+  // end shape
+  &__end-shape {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
   }
 }
 

@@ -15,10 +15,10 @@
           <a href="#skill"> <span>C</span>ompétences </a>
         </li>
         <li>
-          <a href="#formation"> <span>F</span>ormation </a>
+          <a href="#portfolio"> <span>P</span>ortfolio </a>
         </li>
         <li>
-          <a href="#portfolio"> <span>P</span>ortfolio </a>
+          <a href="#formation"> <span>F</span>ormation </a>
         </li>
         <li>
           <a href="#cv">

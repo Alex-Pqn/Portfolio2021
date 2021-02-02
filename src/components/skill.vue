@@ -65,12 +65,12 @@
 
     <!-- bottom -->
     <article class="skill__bottom">
-      <!-- font container -->
+      <!-- front container -->
       <div id="front-container">
         <h2>
-          front - front - front
+          front - front
         </h2>
-        <!-- skill items -->
+        <!-- skill front item -->
         <div class="skill-item" v-for="skill in front" :key="skill.id">
           <skillItemComponent
             :icon="skill.icon"
@@ -84,9 +84,9 @@
       <!-- back container -->
       <div id="back-container">
         <h2>
-          back - back - back
+          back - back
         </h2>
-        <!-- skill items -->
+        <!-- skill back item -->
         <div class="skill-item" v-for="skill in back" :key="skill.id">
           <skillItemComponent
             :icon="skill.icon"
@@ -102,7 +102,7 @@
         <h2>
           outils - outils
         </h2>
-        <!-- skill items -->
+        <!-- skill tools item -->
         <div class="skill-item" v-for="skill in tools" :key="skill.id">
           <skillItemComponent
             :icon="skill.icon"
@@ -261,8 +261,12 @@ export default {
 // skill container
 .skill {
   text-align: center;
+  position: relative;
   scroll-margin-top: 3rem;
+  height: 93vh;
+  padding: 45px 0;
   font-family: "Syne", sans-serif;
+
   background-image: radial-gradient(
       circle at 13% 47%,
       rgb(135, 85, 138) 0%,
@@ -318,10 +322,9 @@ export default {
   &__top {
     margin-bottom: 30px;
     h1 {
-      text-transform: uppercase;
       color: rgb(255, 255, 255);
       font-size: 3.2em;
-      letter-spacing: 3px;
+      letter-spacing: 7px;
       margin-top: 18px;
       background-color: rgba(63, 0, 100, 0.05);
       padding: 10px;
@@ -365,6 +368,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     h2 {
       letter-spacing: 15px;

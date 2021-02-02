@@ -42,10 +42,12 @@
           <span>D</span>ynamique, motivé et appliqué, je touche à l'univers du
           Développement Web depuis maintenant plus d'un an.
         </p>
-        <p>
-          Diplômé il y a quelques mois, je m'efforce de me spécialier dans les
-          technologies et frameworks du front-end.
-        </p>
+        <span>
+          <p>
+            Diplômé il y a quelques mois, je m'efforce de me spécialier dans les
+            technologies et frameworks du front-end.
+          </p>
+        </span>
       </div>
     </div>
   </section>
@@ -116,42 +118,48 @@ export default {
 .profile-pic {
   display: flex;
   justify-content: flex-end;
-  padding-right: 50px;
+  padding-right: 40px;
   img {
-    height: 585px;
+    height: 570px;
   }
 }
 
 // presentation
 .presentation {
   position: relative;
-  width: 25%;
-  padding-left: 50px;
+  width: 23%;
+  padding-left: 40px;
+  padding-bottom: 45px;
 
   // text
   &__text {
     font-family: "Noto Sans JP", sans-serif;
     padding: 3px 6px 3px 17px;
-    background-color: rgba(190, 121, 218, 0.15);
     border-radius: 0.5em;
+    background-color: rgba(255, 255, 255, 0.5);
+
     p {
-      line-height: 50px;
-      margin: 7px 0;
-      font-size: 1.9em;
-      font-family: "Yantramanav", sans-serif;
-      color: rgba(62, 0, 112, 0.8);
+      line-height: 45px;
+      letter-spacing: 1px;
+      margin: 10px 0;
+      font-size: 1.55em;
+      color: rgb(163, 67, 182);
       span {
         font-size: 1.5em;
       }
+    }
+
+    span p {
+      color: rgb(136, 60, 151);
     }
   }
 
   // quote icon
   svg {
     position: absolute;
-    fill: rgba(190, 114, 219, 0.35);
+    fill: rgba(199, 116, 231, 0.17);
     width: 90px;
-    margin: -25px 0 0 -32px;
+    margin: -15px 0 0 -23px;
   }
 }
 </style>

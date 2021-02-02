@@ -58,8 +58,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 
 // about container
 .about-container {
@@ -130,6 +129,7 @@ export default {
 
   // text
   &__text {
+    font-family: "Noto Sans JP", sans-serif;
     padding: 3px 6px 3px 17px;
     background-color: rgba(190, 121, 218, 0.15);
     border-radius: 0.5em;

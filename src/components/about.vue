@@ -68,51 +68,44 @@ export default {
   align-items: center;
   padding-top: 25px;
   background-image: radial-gradient(
-      circle at 13% 47%,
-      rgba(140, 140, 140, 0.03) 0%,
-      rgba(140, 140, 140, 0.03) 25%,
-      transparent 25%,
-      transparent 100%
-    ),
-    radial-gradient(
       circle at 28% 63%,
       rgba(170, 90, 201, 0.267) 0%,
-      rgba(170, 90, 201, 0.055) 16%,
+      rgba(179, 102, 209, 0.123) 16%,
       transparent 16%,
       transparent 100%
     ),
     radial-gradient(
       circle at 81% 56%,
-      rgba(170, 57, 214, 0.089) 0%,
-      rgba(179, 37, 235, 0.075) 12%,
+      rgba(153, 50, 194, 0.116) 0%,
+      rgba(158, 37, 206, 0.116) 12%,
       transparent 12%,
       transparent 100%
     ),
     radial-gradient(
       circle at 26% 48%,
-      rgba(192, 132, 216, 0.288) 0%,
-      rgba(195, 126, 223, 0.123) 6%,
+      rgba(191, 128, 216, 0.322) 0%,
+      rgba(196, 126, 223, 0.171) 6%,
       transparent 6%,
       transparent 100%
     ),
     radial-gradient(
       circle at 97% 17%,
-      rgba(150, 150, 150, 0.03) 0%,
-      rgba(150, 150, 150, 0.03) 56%,
+      rgba(185, 185, 185, 0.03) 0%,
+      rgba(180, 180, 180, 0.03) 56%,
       transparent 56%,
       transparent 100%
     ),
     radial-gradient(
       circle at 50% 100%,
-      rgba(182, 11, 250, 0.11) 0%,
-      rgba(95, 8, 129, 0.068) 36%,
+      rgba(218, 147, 247, 0.205) 0%,
+      rgba(199, 118, 231, 0.11) 36%,
       transparent 36%,
       transparent 100%
     ),
     radial-gradient(
       circle at 55% 52%,
-      rgba(170, 90, 201, 0.178) 0%,
-      rgba(170, 90, 201, 0.144) 6%,
+      rgba(170, 90, 201, 0.219) 0%,
+      rgba(156, 79, 187, 0.212) 6%,
       transparent 6%,
       transparent 100%
     ),

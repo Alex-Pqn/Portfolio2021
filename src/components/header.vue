@@ -161,6 +161,11 @@ header {
   nav ul li {
     a {
       color: rgb(128, 128, 128);
+      &:hover {
+        opacity: 0.8;
+        transition-property: all;
+        transition-duration: 250ms;
+      }
     }
     span {
       font-size: 1.1em;

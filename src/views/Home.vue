@@ -13,7 +13,7 @@
   <skillComponent />
 
   <!-- portfolio part -->
-  <skillComponent />
+  <portfolioComponent />
 </template>
 
 <script>
@@ -21,6 +21,7 @@ import introductionComponent from "@/components/introduction.vue";
 import headerComponent from "@/components/header.vue";
 import aboutComponent from "@/components/about.vue";
 import skillComponent from "@/components/skill.vue";
+import portfolioComponent from "@/components/portfolio.vue";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -31,7 +32,8 @@ export default {
     introductionComponent,
     headerComponent,
     aboutComponent,
-    skillComponent
+    skillComponent,
+    portfolioComponent
   },
   beforeMount() {
     AOS.init();

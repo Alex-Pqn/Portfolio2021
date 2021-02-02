@@ -255,6 +255,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap");
 
 // skill container
@@ -324,6 +325,7 @@ export default {
       margin-top: 18px;
       background-color: rgba(63, 0, 100, 0.05);
       padding: 10px;
+      font-family: "Yantramanav", sans-serif;
     }
     svg {
       width: 50px;

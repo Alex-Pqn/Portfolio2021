@@ -9,6 +9,9 @@
   <!-- about part -->
   <aboutComponent />
 
+  <!-- skill part -->
+  <skillComponent />
+
   <!-- portfolio part -->
   <skillComponent />
 </template>
@@ -19,6 +22,9 @@ import headerComponent from "@/components/header.vue";
 import aboutComponent from "@/components/about.vue";
 import skillComponent from "@/components/skill.vue";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default {
   name: "Home",
   components: {
@@ -26,6 +32,9 @@ export default {
     headerComponent,
     aboutComponent,
     skillComponent
+  },
+  beforeMount() {
+    AOS.init();
   }
 };
 </script>

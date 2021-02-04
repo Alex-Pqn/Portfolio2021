@@ -36,7 +36,9 @@ export default {
     portfolioComponent
   },
   beforeMount() {
-    AOS.init();
+    AOS.init({
+      once: true
+    });
   }
 };
 </script>

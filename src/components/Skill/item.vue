@@ -7,7 +7,7 @@
   </div>
   <div class="skill-item__bottom">
     <div :style="`width: ${perc}%`"></div>
-    <p :style="`background-color: ${percBackground}`">{{ perc }}%</p>
+    <p>{{ perc }}%</p>
   </div>
 </template>
 
@@ -29,10 +29,6 @@ export default {
     },
     perc: {
       type: Number,
-      required: true
-    },
-    percBackground: {
-      type: String,
       required: true
     }
   },
@@ -70,12 +66,14 @@ export default {
     height: 30px;
   }
   p {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(53, 13, 80);
     text-align: center;
     font-size: 1.2em;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
     padding: 0 5.5px 0 9px;
-    line-height: 31px;
+    line-height: 30.5px;
   }
 }
 </style>

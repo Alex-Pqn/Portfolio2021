@@ -36,7 +36,7 @@
         id="front-button"
         data-aos="zoom-in-up"
         data-aos-duration="500"
-        data-aos-offset="370"
+        data-aos-offset="250"
         v-on:click="switchSkillContainer('front')"
       >
         Front
@@ -45,8 +45,8 @@
         id="back-button"
         data-aos="zoom-in-up"
         data-aos-duration="500"
-        data-aos-offset="370"
-        data-aos-delay="200"
+        data-aos-offset="250"
+        data-aos-delay="150"
         v-on:click="switchSkillContainer('back')"
       >
         Back
@@ -55,8 +55,8 @@
         id="tools-button"
         data-aos="zoom-in-up"
         data-aos-duration="500"
-        data-aos-offset="370"
-        data-aos-delay="400"
+        data-aos-offset="250"
+        data-aos-delay="250"
         v-on:click="switchSkillContainer('tools')"
       >
         Outils
@@ -71,7 +71,15 @@
           front - front
         </h2>
         <!-- skill front item -->
-        <div class="skill-item" v-for="skill in front" :key="skill.id">
+        <div
+          class="skill-item"
+          v-for="skill in front"
+          :key="skill.id"
+          data-aos="fade-up"
+          data-aos-duration="750"
+          data-aos-offset="150"
+          data-aos-delay="150"
+        >
           <skillItemComponent
             :icon="skill.icon"
             :name="skill.name"

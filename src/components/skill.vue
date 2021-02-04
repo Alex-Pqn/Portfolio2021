@@ -85,7 +85,6 @@
             :name="skill.name"
             :nameColor="skill.name_color"
             :perc="skill.perc"
-            :percBackground="skill.perc_background"
           />
         </div>
       </div>
@@ -101,7 +100,6 @@
             :name="skill.name"
             :nameColor="skill.name_color"
             :perc="skill.perc"
-            :percBackground="skill.perc_background"
           />
         </div>
       </div>
@@ -117,7 +115,6 @@
             :name="skill.name"
             :nameColor="skill.name_color"
             :perc="skill.perc"
-            :percBackground="skill.perc_background"
           />
         </div>
       </div>
@@ -143,24 +140,28 @@ export default {
           icon: "VUEJS_icon.png",
           name: "Vue.js",
           name_color: "#00BC32",
-          perc: 50,
-          perc_background: "rgb(0, 188, 50, 0.7)"
+          perc: 50
         },
         {
           id: 2,
           icon: "HTMLCSS_icon.png",
           name: "HTML/CSS",
           name_color: "#448FFF",
-          perc: 85,
-          perc_background: "rgb(68, 143, 255, 0.7)"
+          perc: 85
         },
         {
           id: 3,
           icon: "JS_icon.png",
           name: "Javascript",
           name_color: "yellow",
-          perc: 70,
-          perc_background: "rgb(255, 255, 0, 0.75)"
+          perc: 70
+        },
+        {
+          id: 4,
+          icon: "BOOTSTRAP_icon.png",
+          name: "Bootstrap",
+          name_color: "#FFFFFF",
+          perc: 70
         }
       ],
       back: [
@@ -169,24 +170,21 @@ export default {
           icon: "HTMLCSS_icon.png",
           name: "HTML/CSS",
           name_color: "#448FFF",
-          perc: 85,
-          perc_background: "rgb(68, 143, 255, 0.7)"
+          perc: 85
         },
         {
           id: 1,
           icon: "VUEJS_icon.png",
           name: "Vue.js",
           name_color: "#00BC32",
-          perc: 50,
-          perc_background: "rgb(0, 188, 50, 0.7)"
+          perc: 50
         },
         {
           id: 3,
           icon: "JS_icon.png",
           name: "Javascript",
           name_color: "yellow",
-          perc: 70,
-          perc_background: "rgb(255, 255, 0, 0.75)"
+          perc: 70
         }
       ],
       tools: [
@@ -195,24 +193,21 @@ export default {
           icon: "JS_icon.png",
           name: "Javascript",
           name_color: "yellow",
-          perc: 70,
-          perc_background: "rgb(255, 255, 0, 0.75)"
+          perc: 70
         },
         {
           id: 1,
           icon: "VUEJS_icon.png",
           name: "Vue.js",
           name_color: "#00BC32",
-          perc: 50,
-          perc_background: "rgb(0, 188, 50, 0.7)"
+          perc: 50
         },
         {
           id: 2,
           icon: "HTMLCSS_icon.png",
           name: "HTML/CSS",
           name_color: "#448FFF",
-          perc: 85,
-          perc_background: "rgb(68, 143, 255, 0.7)"
+          perc: 85
         }
       ]
     };
@@ -271,8 +266,8 @@ export default {
   text-align: center;
   position: relative;
   scroll-margin-top: 3rem;
-  height: 93vh;
-  padding: 45px 0;
+  height: 98vh;
+  padding: 40px 0;
   font-family: "Syne", sans-serif;
 
   background-image: radial-gradient(
@@ -331,7 +326,7 @@ export default {
     margin-bottom: 30px;
     h1 {
       color: rgb(255, 255, 255);
-      font-size: 3.2em;
+      font-size: 3.15em;
       letter-spacing: 7px;
       margin-top: 18px;
       background-color: rgba(63, 0, 100, 0.05);
@@ -339,7 +334,7 @@ export default {
       font-family: "Yantramanav", sans-serif;
     }
     svg {
-      width: 50px;
+      width: 45px;
       fill: white;
     }
   }
@@ -353,7 +348,7 @@ export default {
     button {
       padding: 7px;
       margin: 0 7px;
-      font-size: 1.3em;
+      font-size: 1.2em;
       background-color: rgba(82, 0, 114, 0.15);
       border: 1px solid rgba(255, 255, 255, 0.75);
       color: white;
@@ -362,7 +357,7 @@ export default {
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.1) !important;
-        border: 1px solid rgb(255, 255, 255);
+        border-color: rgb(255, 255, 255);
       }
     }
     // for default container
@@ -380,9 +375,8 @@ export default {
 
     h2 {
       letter-spacing: 15px;
-      font-size: 2.2em;
-      color: rgba(96, 34, 102, 0.25);
-      padding: 0 10px;
+      font-size: 2.1em;
+      color: rgba(96, 34, 102, 0.3);
     }
   }
 
@@ -418,7 +412,7 @@ export default {
 .skill-item {
   display: flex;
   flex-direction: column;
-  margin: 27px 0 23px;
+  margin: 15px 0 25px;
   width: 40%;
 
   // top

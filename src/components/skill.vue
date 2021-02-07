@@ -73,8 +73,8 @@
         <!-- skill front item -->
         <div
           class="skill-item"
-          v-for="skill in front"
-          :key="skill.id"
+          v-for="(skill, index) in front"
+          :key="index"
           data-aos="fade-up"
           data-aos-duration="750"
           data-aos-offset="150"
@@ -94,7 +94,7 @@
           back - back
         </h2>
         <!-- skill back item -->
-        <div class="skill-item" v-for="skill in back" :key="skill.id">
+        <div class="skill-item" v-for="(skill, index) in back" :key="index">
           <skillItemComponent
             :icon="skill.icon"
             :name="skill.name"
@@ -109,7 +109,7 @@
           outils - outils
         </h2>
         <!-- skill tools item -->
-        <div class="skill-item" v-for="skill in tools" :key="skill.id">
+        <div class="skill-item" v-for="(skill, index) in tools" :key="index">
           <skillItemComponent
             :icon="skill.icon"
             :name="skill.name"
@@ -119,11 +119,6 @@
         </div>
       </div>
     </article>
-
-    <div
-      style="clip-path: polygon(50% 35%, 0% 100%, 100% 100%)"
-      class="skill__end-shape"
-    ></div>
   </section>
 </template>
 
@@ -136,28 +131,24 @@ export default {
     return {
       front: [
         {
-          id: 1,
           icon: "VUEJS_icon.png",
           name: "Vue.js",
           name_color: "#00BC32",
           perc: 50
         },
         {
-          id: 2,
           icon: "HTMLCSS_icon.png",
           name: "HTML/CSS",
           name_color: "#448FFF",
           perc: 85
         },
         {
-          id: 3,
           icon: "JS_icon.png",
           name: "Javascript",
           name_color: "yellow",
           perc: 70
         },
         {
-          id: 4,
           icon: "BOOTSTRAP_icon.png",
           name: "Bootstrap",
           name_color: "#FFFFFF",
@@ -166,21 +157,18 @@ export default {
       ],
       back: [
         {
-          id: 2,
           icon: "HTMLCSS_icon.png",
           name: "HTML/CSS",
           name_color: "#448FFF",
           perc: 85
         },
         {
-          id: 1,
           icon: "VUEJS_icon.png",
           name: "Vue.js",
           name_color: "#00BC32",
           perc: 50
         },
         {
-          id: 3,
           icon: "JS_icon.png",
           name: "Javascript",
           name_color: "yellow",
@@ -189,21 +177,18 @@ export default {
       ],
       tools: [
         {
-          id: 3,
           icon: "JS_icon.png",
           name: "Javascript",
           name_color: "yellow",
           perc: 70
         },
         {
-          id: 1,
           icon: "VUEJS_icon.png",
           name: "Vue.js",
           name_color: "#00BC32",
           perc: 50
         },
         {
-          id: 2,
           icon: "HTMLCSS_icon.png",
           name: "HTML/CSS",
           name_color: "#448FFF",
@@ -269,7 +254,6 @@ export default {
   height: 98vh;
   padding: 40px 0;
   font-family: "Syne", sans-serif;
-
   background-image: radial-gradient(
       circle at 13% 47%,
       rgb(135, 85, 138) 0%,
@@ -378,15 +362,6 @@ export default {
       font-size: 2.1em;
       color: rgba(96, 34, 102, 0.3);
     }
-  }
-
-  // end shape
-  &__end-shape {
-    width: 100%;
-    height: 30px;
-    position: absolute;
-    bottom: 0;
-    background-color: white;
   }
 }
 

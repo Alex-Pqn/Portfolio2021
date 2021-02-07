@@ -12,6 +12,11 @@
   <!-- skill part -->
   <skillComponent />
 
+  <div
+    style="clip-path: polygon(50% 35%, 0% 100%, 100% 100%)"
+    id="skill-sep"
+  ></div>
+
   <!-- portfolio part -->
   <portfolioComponent />
 
@@ -48,4 +53,10 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#skill-sep {
+  height: 60px;
+  background-color: #724a75;
+  transform: rotate(180deg);
+}
+</style>

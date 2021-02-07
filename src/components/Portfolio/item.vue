@@ -226,7 +226,7 @@ export default {
       let modal = document.getElementById("modal-" + containerId).style;
       container.setProperty("display", "flex");
       setTimeout(() => {
-        modal.setProperty("margin-top", "0");
+        modal.setProperty("margin-top", "-8em");
       }, 150);
     },
     // close modal
@@ -235,32 +235,32 @@ export default {
         .style;
       let modal = document.getElementById("modal-" + containerId).style;
 
-      modal.setProperty("margin-top", "90em");
+      modal.setProperty("margin-top", "110em");
       setTimeout(() => {
         container.setProperty("display", "none");
-      }, 250);
+      }, 300);
     },
     // next project
     nextProject(projectId, maxItems) {
       this.closeModal(projectId);
       setTimeout(() => {
         if (projectId == maxItems) {
-          this.displayModal(1);
+          this.displayModal(0);
         } else {
           this.displayModal(projectId + 1);
         }
-      }, 250);
+      }, 300);
     },
     // prev project
     prevProject(projectId, maxItems) {
       this.closeModal(projectId);
       setTimeout(() => {
-        if (projectId === 1) {
+        if (projectId === 0) {
           this.displayModal(maxItems);
         } else {
           this.displayModal(projectId - 1);
         }
-      }, 250);
+      }, 300);
     }
   }
 };
@@ -272,10 +272,10 @@ export default {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 275px;
-  width: 275px;
+  height: 300px;
+  width: 300px;
   margin: 15px;
-  border: 1px solid rgba(151, 0, 221, 0.5);
+  border: 1px solid rgb(167, 70, 224);
   background-size: cover;
 
   &:hover {
@@ -316,10 +316,10 @@ export default {
     padding: 5px 10px;
     justify-content: space-between;
     width: 100%;
-    background-color: rgba(141, 0, 207, 0.8);
+    background-color: rgba(167, 70, 224, 0.85);
     p {
       color: rgb(255, 255, 255);
-      font-size: 1.05em;
+      font-size: 1em;
     }
   }
 }
@@ -345,12 +345,12 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: white;
-  width: 40%;
+  width: 44%;
   padding: 7px;
   border-bottom: 5px solid rgb(138, 50, 209);
   transition-property: all;
-  transition-duration: 250ms;
-  margin-top: 90em;
+  transition-duration: 300ms;
+  margin-top: 110em;
 
   // header
   &__header {
@@ -390,16 +390,17 @@ export default {
     display: flex;
     // left
     &__left {
-      width: 50%;
+      width: 60%;
       img {
-        width: 350px;
+        width: 100%;
       }
     }
     // right
     &__right {
-      width: 50%;
+      width: 40%;
+      padding: 0 10px;
       h2 {
-        font-size: 1.2em;
+        font-size: 1.17em;
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         padding-top: 7px;
         padding-bottom: 3px;
@@ -409,21 +410,23 @@ export default {
         line-height: 25px;
       }
       &__description {
-        height: 45%;
+        height: 50%;
       }
       &__technologies {
-        height: 45%;
+        height: 40%;
         img {
           margin: 5px 8px;
         }
       }
       &__informations {
-        text-align: right;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
         height: 10%;
         svg {
           fill: rgb(132, 43, 233);
           width: 27px;
-          margin: 0 5px;
+          margin-left: 10px;
           &:hover {
             transition-property: all;
             transition-duration: 200ms;

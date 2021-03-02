@@ -106,14 +106,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
-
-@keyframes backgroundFade {
+@keyframes borderFade {
   from {
     border: 2px solid rgba(255, 255, 255, 0);
   }
   to {
     border: 2px solid $border_shape_message_introduction;
+  }
+}
+@keyframes backgroundFade {
+  from {
+  }
+  to {
     background-color: $border_shape_message_introduction;
   }
 }
@@ -149,7 +153,12 @@ export default {
 .introduction-container {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(132deg, rgb(255, 255, 255), rgb(223, 206, 224));
+  background: linear-gradient(
+    132deg,
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(223, 206, 224)
+  );
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
   position: relative;
@@ -176,9 +185,11 @@ export default {
     h5 {
       position: absolute;
       z-index: 999;
-      left: 3px;
-      font-size: 1.2em;
+      left: 0;
+      font-size: 1.3em;
       letter-spacing: 2px;
+      padding-left: 1px;
+      border-left: 2px solid rgb(148, 78, 175);
       color: rgb(148, 78, 175);
       writing-mode: vertical-rl;
     }
@@ -241,7 +252,7 @@ export default {
     position: relative;
     width: 370px;
     height: 450px;
-    animation: backgroundFade 16s;
+    animation: backgroundFade 16s, borderFade 27s;
     animation-fill-mode: forwards;
     clip-path: polygon(
       0% 0%,

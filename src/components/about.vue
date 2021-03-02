@@ -1,5 +1,79 @@
 <template>
   <section id="about" class="about-container">
+    <!-- hobbies -->
+    <div
+      class="hobbie-circle"
+      id="hobbie-drone"
+      data-aos="fade-right"
+      data-aos-duration="750"
+      data-aos-delay="150"
+      data-aos-offset="200"
+    >
+      <img src="../assets/CV.png" alt="" />
+      <p>
+        Drone
+        <svg viewBox="0 0 512 512">
+          <g>
+            <circle cx="256" cy="379.396" r="19.429" />
+            <path
+              d="m512 76.533v-30h-137.714v30h53.856v48.071h-25.214v25.214h-85.571l-26.929-53.857h-68.857l-26.929 53.857h-85.571v-25.214h-25.214v-48.071h53.857v-30h-137.714v30h53.857v48.071h-25.214v40.214c0 22.21 18.005 40.214 40.214 40.214 16.906 0 31.365-10.437 37.312-25.214h54.046l19.428 38.857h152.714l19.428-38.857h54.046c5.947 14.777 20.406 25.214 37.312 25.214 22.21 0 40.214-18.004 40.214-40.214v-40.214h-25.215v-48.071z"
+            />
+            <path
+              d="m342.072 293.325h-47.553v-44.649h-72.947v44.649h-51.643c-19.014 0-34.429 15.414-34.429 34.428v103.286c0 19.014 15.414 34.429 34.429 34.429h172.143c19.014 0 34.428-15.414 34.428-34.429v-103.286c0-19.014-15.414-34.428-34.428-34.428zm-86.072 135.5c-27.255 0-49.429-22.174-49.429-49.429s22.174-49.429 49.429-49.429 49.429 22.174 49.429 49.429-22.174 49.429-49.429 49.429z"
+            />
+          </g>
+        </svg>
+      </p>
+    </div>
+    <div
+      class="hobbie-circle"
+      id="test2"
+      data-aos="fade-right"
+      data-aos-duration="750"
+      data-aos-delay="300"
+      data-aos-offset="200"
+    >
+      <img src="../assets/CV.png" alt="" />
+      <p>
+        Drone
+        <svg viewBox="0 0 512 512">
+          <g>
+            <circle cx="256" cy="379.396" r="19.429" />
+            <path
+              d="m512 76.533v-30h-137.714v30h53.856v48.071h-25.214v25.214h-85.571l-26.929-53.857h-68.857l-26.929 53.857h-85.571v-25.214h-25.214v-48.071h53.857v-30h-137.714v30h53.857v48.071h-25.214v40.214c0 22.21 18.005 40.214 40.214 40.214 16.906 0 31.365-10.437 37.312-25.214h54.046l19.428 38.857h152.714l19.428-38.857h54.046c5.947 14.777 20.406 25.214 37.312 25.214 22.21 0 40.214-18.004 40.214-40.214v-40.214h-25.215v-48.071z"
+            />
+            <path
+              d="m342.072 293.325h-47.553v-44.649h-72.947v44.649h-51.643c-19.014 0-34.429 15.414-34.429 34.428v103.286c0 19.014 15.414 34.429 34.429 34.429h172.143c19.014 0 34.428-15.414 34.428-34.429v-103.286c0-19.014-15.414-34.428-34.428-34.428zm-86.072 135.5c-27.255 0-49.429-22.174-49.429-49.429s22.174-49.429 49.429-49.429 49.429 22.174 49.429 49.429-22.174 49.429-49.429 49.429z"
+            />
+          </g>
+        </svg>
+      </p>
+    </div>
+    <div
+      class="hobbie-circle"
+      id="test3"
+      data-aos="fade-up"
+      data-aos-duration="750"
+      data-aos-delay="500"
+      data-aos-offset="200"
+    >
+      <img src="../assets/CV.png" alt="" />
+      <p>
+        Drone
+        <svg viewBox="0 0 512 512">
+          <g>
+            <circle cx="256" cy="379.396" r="19.429" />
+            <path
+              d="m512 76.533v-30h-137.714v30h53.856v48.071h-25.214v25.214h-85.571l-26.929-53.857h-68.857l-26.929 53.857h-85.571v-25.214h-25.214v-48.071h53.857v-30h-137.714v30h53.857v48.071h-25.214v40.214c0 22.21 18.005 40.214 40.214 40.214 16.906 0 31.365-10.437 37.312-25.214h54.046l19.428 38.857h152.714l19.428-38.857h54.046c5.947 14.777 20.406 25.214 37.312 25.214 22.21 0 40.214-18.004 40.214-40.214v-40.214h-25.215v-48.071z"
+            />
+            <path
+              d="m342.072 293.325h-47.553v-44.649h-72.947v44.649h-51.643c-19.014 0-34.429 15.414-34.429 34.428v103.286c0 19.014 15.414 34.429 34.429 34.429h172.143c19.014 0 34.428-15.414 34.428-34.429v-103.286c0-19.014-15.414-34.428-34.428-34.428zm-86.072 135.5c-27.255 0-49.429-22.174-49.429-49.429s22.174-49.429 49.429-49.429 49.429 22.174 49.429 49.429-22.174 49.429-49.429 49.429z"
+            />
+          </g>
+        </svg>
+      </p>
+    </div>
+
     <!-- profile pic -->
     <div class="profile-pic">
       <img
@@ -44,8 +118,8 @@
         </p>
         <span>
           <p>
-            Diplômé il y a quelques mois, je m'efforce de me spécialier dans les
-            technologies et frameworks du front-end.
+            Diplômé il y a quelques mois, je m'efforce de me spécialiser dans
+            les technologies et frameworks du front-end.
           </p>
         </span>
       </div>
@@ -60,58 +134,114 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+// hobbies circles
+.hobbie-circle {
+  position: absolute;
+  border-radius: 50%;
+  text-align: center;
+  background-color: black;
+  cursor: pointer;
+
+  &:hover {
+    img {
+      transition-property: all;
+      transition-duration: 250ms;
+      opacity: 0.6;
+    }
+    p {
+      display: flex !important;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  p {
+    display: none !important;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    left: 0;
+    color: white;
+    svg {
+      fill: white;
+    }
+  }
+}
+#hobbie-drone {
+  border: 20px solid #8b588e;
+  height: 400px;
+  width: 400px;
+  left: -75px;
+  bottom: -120px;
+  p {
+    font-size: 2em;
+    line-height: 50px;
+    top: 23%;
+    svg {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+#test2 {
+  border: 30px solid #734a75;
+  height: 265px;
+  width: 265px;
+  left: 230px;
+  bottom: -120px;
+  p {
+    font-size: 1.35em;
+    line-height: 37px;
+    top: 12%;
+    svg {
+      height: 35px;
+      width: 35px;
+    }
+  }
+}
+#test3 {
+  border: 20px solid #89538a;
+  height: 235px;
+  width: 235px;
+  right: 170px;
+  bottom: -110px;
+
+  p {
+    font-size: 1.6em;
+    line-height: 35px;
+    top: 12%;
+    svg {
+      height: 35px;
+      width: 35px;
+    }
+  }
+}
 
 // about container
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   scroll-margin-top: 10rem;
   padding-top: 25px;
   background-image: radial-gradient(
-      circle at 28% 63%,
-      rgba(170, 90, 201, 0.267) 0%,
-      rgba(179, 102, 209, 0.123) 16%,
-      transparent 16%,
+      circle at 50% 103%,
+      #89538a 0%,
+      #89538a 5%,
+      transparent 4%,
       transparent 100%
     ),
     radial-gradient(
-      circle at 81% 56%,
-      rgba(153, 50, 194, 0.116) 0%,
-      rgba(158, 37, 206, 0.116) 12%,
-      transparent 12%,
+      circle at 77.5% 100%,
+      #734a75 0%,
+      #734a75 4.5%,
+      transparent 4%,
       transparent 100%
-    ),
-    radial-gradient(
-      circle at 26% 48%,
-      rgba(191, 128, 216, 0.322) 0%,
-      rgba(196, 126, 223, 0.171) 6%,
-      transparent 6%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 97% 17%,
-      rgba(185, 185, 185, 0.03) 0%,
-      rgba(180, 180, 180, 0.03) 56%,
-      transparent 56%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 50% 100%,
-      rgba(218, 147, 247, 0.205) 0%,
-      rgba(199, 118, 231, 0.11) 36%,
-      transparent 36%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 55% 52%,
-      rgba(170, 90, 201, 0.219) 0%,
-      rgba(156, 79, 187, 0.212) 6%,
-      transparent 6%,
-      transparent 100%
-    ),
-    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+    );
 }
 
 // profile pic
@@ -128,29 +258,26 @@ export default {
 .presentation {
   position: relative;
   width: 23%;
-  padding-left: 40px;
+  padding-left: 30px;
   padding-bottom: 45px;
 
   // text
   &__text {
-    font-family: "Noto Sans JP", sans-serif;
-    padding: 3px 6px 3px 17px;
-    border-radius: 0.5em;
-    background-color: rgba(255, 255, 255, 0.5);
-
     p {
-      line-height: 45px;
+      line-height: 42px;
       letter-spacing: 1px;
       margin: 10px 0;
-      font-size: 1.55em;
-      color: rgb(163, 67, 182);
+      font-size: 1.75em;
+      color: rgb(154, 65, 172);
       span {
         font-size: 1.5em;
       }
     }
 
     span p {
-      color: rgb(136, 60, 151);
+      color: rgb(110, 50, 122);
+      border-left: 5px solid rgb(110, 50, 122);
+      padding-left: 13px;
     }
   }
 

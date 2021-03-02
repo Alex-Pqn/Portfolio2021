@@ -1,13 +1,15 @@
 <template>
-  <div class="skill-item__top">
-    <img :src="getAssetPath(icon)" alt="" />
-    <p :style="`color: ${nameColor}`">
-      {{ name }}
-    </p>
-  </div>
-  <div class="skill-item__bottom">
-    <div :style="`width: ${perc}%`"></div>
-    <p>{{ perc }}%</p>
+  <div class="skill-item">
+    <div class="skill-item__top">
+      <img :src="getAssetPath(icon)" alt="" />
+      <p :style="`color: ${nameColor}`">
+        {{ name }}
+      </p>
+    </div>
+    <div class="skill-item__bottom">
+      <div :style="`width: ${perc}%`"></div>
+      <p>{{ perc }} %</p>
+    </div>
   </div>
 </template>
 
@@ -41,39 +43,49 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.skill-item__top {
+// skill item
+.skill-item {
   display: flex;
-  align-items: center;
-  margin-bottom: 17px;
-  img {
-  }
-  p {
-    font-size: 1.3em;
-    margin-left: 12px;
-  }
-}
-.skill-item__bottom {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.1);
-  height: 30px;
-  width: 100%;
-  div {
+  flex-direction: column;
+  margin: 25px 0;
+  width: 700px;
+
+  // top
+  &__top {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: rgb(148, 0, 216);
-    height: 30px;
+    margin-bottom: 17px;
+    p {
+      font-size: 1.4em;
+      margin-left: 12px;
+    }
   }
-  p {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: rgb(53, 13, 80);
-    text-align: center;
-    font-size: 1.2em;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
-    padding: 0 5.5px 0 9px;
-    line-height: 30.5px;
+
+  // bottom
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 32px;
+    width: 100%;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $item-color_skill-part;
+      height: 100%;
+    }
+    p {
+      text-align: center;
+      font-size: 1.2em;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      padding: 0 5.5px 0 9px;
+      line-height: 31px;
+      color: white;
+      background-color: $item-color_skill-part;
+    }
   }
 }
 </style>

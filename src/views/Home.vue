@@ -22,6 +22,9 @@
 
   <!-- formation part -->
   <formationComponent />
+
+  <!-- cv part -->
+  <cvComponent />
 </template>
 
 <script>
@@ -31,6 +34,7 @@ import aboutComponent from "@/components/about.vue";
 import skillComponent from "@/components/skill.vue";
 import portfolioComponent from "@/components/portfolio.vue";
 import formationComponent from "@/components/formation.vue";
+import cvComponent from "@/components/cv.vue";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -43,7 +47,8 @@ export default {
     aboutComponent,
     skillComponent,
     portfolioComponent,
-    formationComponent
+    formationComponent,
+    cvComponent
   },
   beforeMount() {
     AOS.init({
@@ -54,6 +59,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap");
+
 #skill-sep {
   height: 60px;
   background-color: #724a75;

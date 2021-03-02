@@ -13,21 +13,13 @@
         viewBox="0 0 576 512"
         data-aos="fade-up"
         data-aos-duration="750"
-        data-aos-offset="2000"
+        data-aos-offset="1700"
         data-aos-delay="150"
       >
         <path
           d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"
         ></path>
       </svg>
-      <h1
-        data-aos="fade-up"
-        data-aos-duration="750"
-        data-aos-offset="200"
-        data-aos-delay="150"
-      >
-        Compétences
-      </h1>
     </div>
 
     <!-- middle -->
@@ -36,7 +28,6 @@
         id="front-button"
         data-aos="zoom-in-up"
         data-aos-duration="500"
-        data-aos-offset="250"
         v-on:click="switchSkillContainer('front')"
       >
         Front
@@ -45,7 +36,6 @@
         id="back-button"
         data-aos="zoom-in-up"
         data-aos-duration="500"
-        data-aos-offset="250"
         data-aos-delay="150"
         v-on:click="switchSkillContainer('back')"
       >
@@ -55,7 +45,6 @@
         id="tools-button"
         data-aos="zoom-in-up"
         data-aos-duration="500"
-        data-aos-offset="250"
         data-aos-delay="250"
         v-on:click="switchSkillContainer('tools')"
       >
@@ -65,58 +54,49 @@
 
     <!-- bottom -->
     <article class="skill__bottom">
+      <!-- default title -->
+      <h2 id="title-container">
+        front
+      </h2>
       <!-- front container -->
       <div id="front-container">
-        <h2>
-          front - front
-        </h2>
         <!-- skill front item -->
-        <div
-          class="skill-item"
+        <skillItemComponent
           v-for="(skill, index) in front"
           :key="index"
           data-aos="fade-up"
           data-aos-duration="750"
-          data-aos-offset="150"
-          data-aos-delay="150"
-        >
-          <skillItemComponent
-            :icon="skill.icon"
-            :name="skill.name"
-            :nameColor="skill.name_color"
-            :perc="skill.perc"
-          />
-        </div>
+          data-aos-offset="-5"
+          :data-aos-delay="index * 250"
+          :icon="skill.icon"
+          :name="skill.name"
+          :nameColor="skill.name_color"
+          :perc="skill.perc"
+        />
       </div>
       <!-- back container -->
       <div id="back-container">
-        <h2>
-          back - back
-        </h2>
         <!-- skill back item -->
-        <div class="skill-item" v-for="(skill, index) in back" :key="index">
-          <skillItemComponent
-            :icon="skill.icon"
-            :name="skill.name"
-            :nameColor="skill.name_color"
-            :perc="skill.perc"
-          />
-        </div>
+        <skillItemComponent
+          v-for="(skill, index) in back"
+          :key="index"
+          :icon="skill.icon"
+          :name="skill.name"
+          :nameColor="skill.name_color"
+          :perc="skill.perc"
+        />
       </div>
       <!-- tools container -->
       <div id="tools-container">
-        <h2>
-          outils - outils
-        </h2>
         <!-- skill tools item -->
-        <div class="skill-item" v-for="(skill, index) in tools" :key="index">
-          <skillItemComponent
-            :icon="skill.icon"
-            :name="skill.name"
-            :nameColor="skill.name_color"
-            :perc="skill.perc"
-          />
-        </div>
+        <skillItemComponent
+          v-for="(skill, index) in tools"
+          :key="index"
+          :icon="skill.icon"
+          :name="skill.name"
+          :nameColor="skill.name_color"
+          :perc="skill.perc"
+        />
       </div>
     </article>
   </section>
@@ -204,6 +184,8 @@ export default {
       const frontContainer = document.getElementById("front-container");
       const backContainer = document.getElementById("back-container");
       const toolsContainer = document.getElementById("tools-container");
+      // title container
+      const titleContainer = document.getElementById("title-container");
       // buttons
       const frontButton = document.getElementById("front-button");
       const backButton = document.getElementById("back-button");
@@ -222,16 +204,19 @@ export default {
         case "front":
           frontContainer.style.display = "flex";
           frontButton.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+          titleContainer.innerHTML = "front";
           break;
 
         case "back":
           backContainer.style.display = "flex";
           backButton.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+          titleContainer.innerHTML = "back";
           break;
 
         case "tools":
           toolsContainer.style.display = "flex";
           toolsButton.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+          titleContainer.innerHTML = "outils";
           break;
       }
     }
@@ -243,81 +228,63 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap");
-
 // skill container
 .skill {
   text-align: center;
   position: relative;
-  scroll-margin-top: 3rem;
-  height: 98vh;
-  padding: 40px 0;
+  scroll-margin-top: 8rem;
+  height: 90vh;
   font-family: "Syne", sans-serif;
   background-image: radial-gradient(
-      circle at 13% 47%,
-      rgb(135, 85, 138) 0%,
-      rgb(135, 85, 138) 25%,
-      transparent 25%,
+      circle at 12.5% 0%,
+      #734a75 0%,
+      #734a75 8%,
+      transparent 8%,
       transparent 100%
     ),
     radial-gradient(
-      circle at 28% 63%,
-      rgb(123, 76, 128) 0%,
-      rgb(126, 78, 130) 16%,
-      transparent 16%,
+      circle at 8% 90%,
+      #734a75 0%,
+      #734a75 20%,
+      transparent 20%,
       transparent 100%
     ),
     radial-gradient(
-      circle at 81% 56%,
-      rgb(117, 70, 121) 0%,
-      rgb(121, 74, 124) 12%,
-      transparent 12%,
+      circle at 100% 40%,
+      #764b79 0%,
+      #734a75 11%,
+      transparent 11%,
       transparent 100%
     ),
     radial-gradient(
-      circle at 26% 48%,
-      rgba(189, 24, 24, 0) 0%,
-      rgba(189, 24, 24, 0) 6%,
+      circle at 100% 65%,
+      #764b79 0%,
+      #734a75 6%,
       transparent 6%,
       transparent 100%
     ),
     radial-gradient(
       circle at 97% 17%,
       rgb(132, 81, 134) 0%,
-      rgb(138, 83, 139) 56%,
-      transparent 56%,
+      rgb(138, 83, 139) 58%,
+      transparent 58%,
       transparent 100%
     ),
     radial-gradient(
-      circle at 50% 100%,
+      circle at 35% 100%,
       rgb(115, 74, 117) 0%,
-      rgb(115, 74, 117) 36%,
-      transparent 36%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 55% 52%,
-      rgba(74, 46, 46, 0) 0%,
-      rgba(74, 46, 46, 0) 6%,
-      transparent 6%,
+      rgb(115, 74, 117) 22%,
+      transparent 22%,
       transparent 100%
     ),
     linear-gradient(90deg, rgb(139, 88, 142), rgb(139, 88, 142));
 
   // top
   &__top {
-    margin-bottom: 30px;
-    h1 {
-      color: rgb(255, 255, 255);
-      font-size: 3.15em;
-      letter-spacing: 7px;
-      margin-top: 18px;
-      background-color: rgba(63, 0, 100, 0.05);
-      padding: 10px;
-      font-family: "Yantramanav", sans-serif;
-    }
+    margin-bottom: 35px;
+
     svg {
+      margin-top: -15px;
       width: 45px;
       fill: white;
     }
@@ -327,12 +294,12 @@ export default {
   &__middle {
     justify-content: center;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     button {
       padding: 7px;
       margin: 0 7px;
-      font-size: 1.2em;
+      font-size: 1.5em;
       background-color: rgba(82, 0, 114, 0.15);
       border: 1px solid rgba(255, 255, 255, 0.75);
       color: white;
@@ -344,7 +311,7 @@ export default {
         border-color: rgb(255, 255, 255);
       }
     }
-    // for default container
+    // default container
     #front-button {
       background-color: rgba(255, 255, 255, 0.1);
     }
@@ -355,11 +322,10 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 
     h2 {
       letter-spacing: 15px;
-      font-size: 2.1em;
+      font-size: 2.3em;
       color: rgba(96, 34, 102, 0.3);
     }
   }
@@ -369,7 +335,6 @@ export default {
 #front-container,
 #back-container,
 #tools-container {
-  width: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -381,51 +346,5 @@ export default {
 #back-container,
 #tools-container {
   display: none;
-}
-
-// skill item
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  margin: 15px 0 25px;
-  width: 40%;
-
-  // top
-  &__top {
-    display: flex;
-    align-items: center;
-    margin-bottom: 17px;
-    img {
-    }
-    p {
-      font-size: 1.3em;
-      margin-left: 12px;
-    }
-  }
-
-  // bottom
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.1);
-    height: 30px;
-    width: 100%;
-
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgb(148, 0, 216);
-      height: 30px;
-    }
-    p {
-      text-align: center;
-      font-size: 1.2em;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      padding: 0 5.5px 0 9px;
-      line-height: 31px;
-    }
-  }
 }
 </style>

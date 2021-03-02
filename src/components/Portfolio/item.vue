@@ -272,10 +272,10 @@ export default {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 300px;
-  width: 300px;
-  margin: 15px;
-  border: 1px solid rgb(167, 70, 224);
+  height: 320px;
+  width: 320px;
+  margin: 13px 20px;
+  border: 1px solid rgb(148, 61, 199);
   background-size: cover;
 
   &:hover {
@@ -316,7 +316,7 @@ export default {
     padding: 5px 10px;
     justify-content: space-between;
     width: 100%;
-    background-color: rgba(167, 70, 224, 0.85);
+    background-color: rgba(158, 67, 211, 0.9);
     p {
       color: rgb(255, 255, 255);
       font-size: 1em;

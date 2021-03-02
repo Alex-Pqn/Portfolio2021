@@ -1,15 +1,11 @@
 <template>
   <section id="portfolio" class="portfolio">
     <!-- top -->
-    <div
-      class="portfolio__top"
-      data-aos="fade-up"
-      data-aos-duration="750"
-      data-aos-offset="250"
-      data-aos-delay="150"
-    >
+    <div class="portfolio__top">
       <h1>
-        Découvrez mes projets !
+        Découvrez
+        <span>mes</span>
+        projets !
       </h1>
     </div>
     <div class="portfolio__bottom">
@@ -18,7 +14,7 @@
         :key="index"
         data-aos="fade-up"
         data-aos-duration="1000"
-        :data-aos-delay="index * 150 + 150"
+        :data-aos-delay="index * 250"
       >
         <!-- substracted 1 on maxItems since the indexes start at 0 -->
         <portfolioItemComponent
@@ -122,8 +118,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap");
-
 .portfolio {
   display: flex;
   flex-direction: column;
@@ -238,13 +232,6 @@ export default {
       transparent 50%,
       transparent 100%
     ),
-    radial-gradient(
-      circle at top center,
-      rgb(114, 74, 117) 0%,
-      rgb(114, 74, 117) 10%,
-      transparent 10%,
-      transparent 90%
-    ),
     linear-gradient(
       0deg,
       rgb(233, 233, 233),
@@ -253,10 +240,28 @@ export default {
     );
 
   &__top {
-    margin: 112px 0 18px 0;
+    margin: 45px 45px 55px 0;
     h1 {
-      font-size: 3.15em;
-      color: rgb(172, 77, 228);
+      font-size: 3.7em;
+      color: rgb(162, 69, 216);
+      & span {
+        color: white;
+        padding: 75px 35px;
+
+        background-image: radial-gradient(
+            circle at 50% 48%,
+            rgb(114, 74, 117) 0%,
+            rgb(114, 74, 117) 57%,
+            transparent 10%,
+            transparent 90%
+          ),
+          linear-gradient(
+            0deg,
+            rgb(255, 255, 255),
+            rgb(255, 255, 255),
+            rgb(255, 255, 255)
+          );
+      }
     }
   }
 
@@ -265,7 +270,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 75%;
+    width: 80%;
 
     svg {
       width: 50px;

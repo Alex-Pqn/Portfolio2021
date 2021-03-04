@@ -4,13 +4,10 @@
     :style="`background-image: url(${getAssetPath(img)})`"
     class="portfolio-item"
     v-on:click="displayModal(id)"
-    @mouseenter="displayModalIcon(id)"
-    @mouseleave="removeModalIcon(id)"
   >
     <!-- content -->
-    <div class="portfolio-item__content" :id="`item-${id}`">
+    <div class="portfolio-item__content">
       <svg
-        :id="`icon-${id}`"
         aria-hidden="true"
         focusable="false"
         data-prefix="far"
@@ -23,6 +20,7 @@
         ></path>
       </svg>
     </div>
+
     <!-- footer -->
     <div class="portfolio-item__footer">
       <p>
@@ -32,9 +30,9 @@
   </div>
 
   <!-- modal container -->
-  <div :id="`modal-container-${id}`" class="modal-container">
+  <div class="modal-container">
     <!-- portfolio modal -->
-    <div :id="`modal-${id}`" class="portfolio-modal">
+    <div class="portfolio-modal">
       <!-- header -->
       <div class="portfolio-modal__header">
         <h1>
@@ -42,7 +40,7 @@
         </h1>
         <div class="portfolio-modal__header__nextPrev">
           <svg
-            v-on:click="prevProject(id, maxItems)"
+            v-on:click="prevProject(id)"
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
@@ -55,7 +53,7 @@
             ></path>
           </svg>
           <svg
-            v-on:click="nextProject(id, maxItems)"
+            v-on:click="nextProject(id)"
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
@@ -193,55 +191,41 @@ export default {
     },
     siteUrl: {
       type: String
-    },
-    maxItems: {
-      type: String,
-      required: true
     }
   },
   methods: {
     getAssetPath: function(icon) {
       return require(`@/assets/${icon}`);
     },
-    // display modal icon
-    displayModalIcon: function(containerId) {
-      let container = document.getElementById("item-" + containerId).style;
-      let icon = document.getElementById("icon-" + containerId).style;
-
-      icon.setProperty("opacity", "100%");
-      container.setProperty("--backgroundColor", "rgba(0, 0, 0, 0.25)");
-    },
-    // remove modal icon
-    removeModalIcon: function(containerId) {
-      let container = document.getElementById("item-" + containerId).style;
-      let icon = document.getElementById("icon-" + containerId).style;
-
-      icon.setProperty("opacity", "0");
-      container.setProperty("--backgroundColor", "none");
-    },
     // display modal
     displayModal: function(containerId) {
-      let container = document.getElementById("modal-container-" + containerId)
-        .style;
-      let modal = document.getElementById("modal-" + containerId).style;
-      container.setProperty("display", "flex");
+      let modalContainer = document.querySelectorAll(".modal-container")[
+        containerId
+      ];
+      let modal = modalContainer.childNodes[1].style;
+
+      modalContainer.style.setProperty("display", "flex");
       setTimeout(() => {
         modal.setProperty("margin-top", "-8em");
       }, 150);
     },
     // close modal
     closeModal: function(containerId) {
-      let container = document.getElementById("modal-container-" + containerId)
-        .style;
-      let modal = document.getElementById("modal-" + containerId).style;
+      let modalContainer = document.querySelectorAll(".modal-container")[
+        containerId
+      ];
+      let modal = modalContainer.childNodes[1].style;
 
       modal.setProperty("margin-top", "110em");
       setTimeout(() => {
-        container.setProperty("display", "none");
+        modalContainer.style.setProperty("display", "none");
       }, 300);
     },
     // next project
+    nextProject(projectId) {
       // substracted 1 on maxItems since the indexes of portfolio items start at 0
+      const maxItems = document.querySelectorAll(".portfolio-item").length - 1;
+
       this.closeModal(projectId);
       setTimeout(() => {
         if (projectId == maxItems) {
@@ -252,7 +236,10 @@ export default {
       }, 300);
     },
     // prev project
+    prevProject(projectId) {
       // substracted 1 on maxItems since the indexes of portfolio items start at 0
+      const maxItems = document.querySelectorAll(".portfolio-item").length - 1;
+
       this.closeModal(projectId);
       setTimeout(() => {
         if (projectId === 0) {
@@ -273,18 +260,23 @@ export default {
   flex-direction: column;
   position: relative;
   height: 320px;
-  width: 320px;
+  width: 300px;
   margin: 13px 20px;
   border: 1px solid rgb(148, 61, 199);
   background-size: cover;
 
   &:hover {
     cursor: pointer;
+    ::before {
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+    svg {
+      opacity: 100%;
+    }
   }
   ::before {
     transition-property: all;
     transition-duration: 250ms;
-    background-color: var(--backgroundColor);
     position: absolute;
     content: "";
     right: 0;

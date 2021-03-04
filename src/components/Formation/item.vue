@@ -1,21 +1,21 @@
 <template>
   <!-- formation item -->
   <div class="formation-item" :id="`formation-container-${id}`">
-    
     <!-- content -->
     <div class="formation-item__content" :id="`formation-content-${id}`">
-      
       <!-- date -->
       <div class="formation-item__content__date">
-        <h2>
-          {{ date }}
-        </h2>
+        <p>
+          <span>
+            {{ date }}
+          </span>
+        </p>
       </div>
       <!-- name -->
       <div class="formation-item__content__name">
-        <h3>
+        <p>
           {{ name }}
-        </h3>
+        </p>
       </div>
       <!-- description -->
       <div class="formation-item__content__description">
@@ -84,7 +84,9 @@ export default {
   justify-content: left;
   align-items: center;
   width: 50%;
-  margin-bottom: 50px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  z-index: 10;
 
   // content
   &__content {
@@ -94,18 +96,30 @@ export default {
     text-align: right;
 
     // date
-      line-height: 17px;
-      color: rgba(126, 30, 155, 0.8);
+    &__date {
+      p {
+        font-size: 1.37em;
+        line-height: 17px;
+        color: rgb(160, 50, 194);
+        & span {
+          border-top: 3px solid rgb(160, 50, 194);
+        }
+      }
     }
     // name
-      line-height: 45px;
-      font-size: 1.6em;
-      color: rgb(172, 55, 207);
+    &__name {
+      p {
+        line-height: 45px;
+        font-size: 1.6em;
+        color: rgb(176, 56, 212);
+      }
     }
     // description
-    p {
-      font-size: 1.2em;
-      color: rgb(0, 0, 0);
+    &__description {
+      p {
+        font-size: 1.2em;
+        color: rgb(0, 0, 0);
+      }
     }
   }
   // img

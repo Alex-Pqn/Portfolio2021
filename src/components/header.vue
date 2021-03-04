@@ -1,5 +1,5 @@
 <template>
-  <!-- header -->
+  <!-- header container -->
   <header :id="id">
     <!-- credit -->
     <p>
@@ -78,7 +78,7 @@ export default {
   }
 }
 
-// header
+// header container
 header {
   display: flex;
   justify-content: center;

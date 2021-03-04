@@ -1,22 +1,30 @@
 <template>
+  <!-- formation item -->
   <div class="formation-item" :id="`formation-container-${id}`">
+    
+    <!-- content -->
     <div class="formation-item__content" :id="`formation-content-${id}`">
+      
+      <!-- date -->
       <div class="formation-item__content__date">
         <h2>
           {{ date }}
         </h2>
       </div>
+      <!-- name -->
       <div class="formation-item__content__name">
         <h3>
           {{ name }}
         </h3>
       </div>
+      <!-- description -->
       <div class="formation-item__content__description">
         <p>
           {{ description }}
         </p>
       </div>
     </div>
+    <!-- img -->
     <div class="formation-item__img">
       <img :src="getAssetPath(img)" alt="" />
     </div>
@@ -70,6 +78,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+// formation item
 .formation-item {
   display: flex;
   justify-content: left;
@@ -77,27 +86,29 @@ export default {
   width: 50%;
   margin-bottom: 50px;
 
+  // content
   &__content {
     width: 37.5%;
     display: flex;
     flex-direction: column;
     text-align: right;
 
-    h2 {
-      font-size: 1.3em;
+    // date
       line-height: 17px;
       color: rgba(126, 30, 155, 0.8);
     }
-    h3 {
+    // name
       line-height: 45px;
       font-size: 1.6em;
       color: rgb(172, 55, 207);
     }
+    // description
     p {
       font-size: 1.2em;
       color: rgb(0, 0, 0);
     }
   }
+  // img
   &__img {
     display: flex;
     justify-content: center;

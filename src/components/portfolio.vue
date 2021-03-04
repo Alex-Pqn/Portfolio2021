@@ -1,4 +1,5 @@
 <template>
+  <!-- portfolio container -->
   <section id="portfolio" class="portfolio">
     <!-- top -->
     <div class="portfolio__top">
@@ -8,6 +9,8 @@
         projets !
       </h1>
     </div>
+    
+    <!-- bottom -->
     <div class="portfolio__bottom">
       <div
         v-for="(project, index) in items"
@@ -118,6 +121,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+// portfolio container
 .portfolio {
   display: flex;
   flex-direction: column;
@@ -239,6 +243,7 @@ export default {
       rgb(255, 255, 255)
     );
 
+  // top
   &__top {
     margin: 45px 45px 55px 0;
     h1 {
@@ -265,6 +270,7 @@ export default {
     }
   }
 
+  // bottom
   &__bottom {
     display: flex;
     justify-content: center;

@@ -241,7 +241,7 @@ export default {
       }, 300);
     },
     // next project
-    nextProject(projectId, maxItems) {
+      // substracted 1 on maxItems since the indexes of portfolio items start at 0
       this.closeModal(projectId);
       setTimeout(() => {
         if (projectId == maxItems) {
@@ -252,7 +252,7 @@ export default {
       }, 300);
     },
     // prev project
-    prevProject(projectId, maxItems) {
+      // substracted 1 on maxItems since the indexes of portfolio items start at 0
       this.closeModal(projectId);
       setTimeout(() => {
         if (projectId === 0) {

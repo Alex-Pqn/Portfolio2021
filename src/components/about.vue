@@ -1,6 +1,8 @@
 <template>
+  <!-- about container -->
   <section id="about" class="about-container">
-    <!-- hobbies -->
+    
+    <!-- hobbie circle : drone -->
     <div
       class="hobbie-circle"
       id="hobbie-drone"
@@ -25,6 +27,8 @@
         </svg>
       </p>
     </div>
+    
+    <!-- hobbie circle : test2 -->
     <div
       class="hobbie-circle"
       id="test2"
@@ -49,6 +53,8 @@
         </svg>
       </p>
     </div>
+    
+    <!-- hobbie circle : test3 -->
     <div
       class="hobbie-circle"
       id="test3"
@@ -134,7 +140,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-// hobbies circles
+// hobbies circles (position absolute)
 .hobbie-circle {
   position: absolute;
   border-radius: 50%;
@@ -170,6 +176,8 @@ export default {
     }
   }
 }
+
+// hobbie circle : drone
 #hobbie-drone {
   border: 20px solid #8b588e;
   height: 400px;
@@ -186,6 +194,7 @@ export default {
     }
   }
 }
+// hobbie circle : test2
 #test2 {
   border: 30px solid #734a75;
   height: 265px;
@@ -202,6 +211,7 @@ export default {
     }
   }
 }
+// hobbie circle : test3
 #test3 {
   border: 20px solid #89538a;
   height: 235px;

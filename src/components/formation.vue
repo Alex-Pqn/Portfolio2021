@@ -1,10 +1,15 @@
 <template>
+  <!-- formation container -->
   <section id="formation" class="formation">
+    
+    <!-- title -->
     <div class="formation__title">
       <h1>
         Mon parcours de formation
       </h1>
     </div>
+    
+    <!-- items container -->
     <div id="items-container">
       <formationItemComponent
         v-for="(formation, index) in items"
@@ -15,8 +20,10 @@
         :date="formation.date"
         :img="formation.img"
       />
+      <!-- timeline -->
       <div class="formation__timeline"></div>
     </div>
+    <!-- timeline end -->
     <div class="formation__timeline-end">
       <p>
         Début de mon parcours
@@ -69,6 +76,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+// formation container
 .formation {
   display: flex;
   flex-direction: column;
@@ -162,6 +170,7 @@ export default {
     ),
     linear-gradient(0deg, rgb(218, 218, 218), rgb(233, 233, 233));
 
+  // title
   &__title {
     margin-bottom: 35px;
     h1 {
@@ -169,6 +178,7 @@ export default {
     }
   }
 
+  // timeline
   &__timeline {
     position: absolute;
     background-color: $timeline_formation-part;
@@ -176,6 +186,7 @@ export default {
     width: 3.5px;
   }
 
+  // timeline end
   &__timeline-end {
     p {
       color: rgb(153, 19, 180);
@@ -184,6 +195,7 @@ export default {
   }
 }
 
+// items container
 #items-container {
   position: relative;
   display: flex;

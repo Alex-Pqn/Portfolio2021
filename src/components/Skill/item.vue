@@ -1,11 +1,16 @@
 <template>
+  <!-- skill item -->
   <div class="skill-item">
+    
+    <!-- top -->
     <div class="skill-item__top">
       <img :src="getAssetPath(icon)" alt="" />
       <p :style="`color: ${nameColor}`">
         {{ name }}
       </p>
     </div>
+    
+    <!-- bottom -->
     <div class="skill-item__bottom">
       <div :style="`width: ${perc}%`"></div>
       <p>{{ perc }} %</p>

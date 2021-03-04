@@ -9,17 +9,17 @@
         projets !
       </h1>
     </div>
-    
+
     <!-- bottom -->
     <div class="portfolio__bottom">
       <div
         v-for="(project, index) in items"
         :key="index"
         data-aos="fade-up"
+        data-aos-offset="-5"
         data-aos-duration="1000"
         :data-aos-delay="index * 250"
       >
-        <!-- substracted 1 on maxItems since the indexes start at 0 -->
         <portfolioItemComponent
           :id="index"
           :title="project.title"
@@ -28,7 +28,6 @@
           :technologies="project.technologies"
           :githubUrl="project.githubUrl"
           :siteUrl="project.siteUrl"
-          :maxItems="items.length - 1"
         />
       </div>
     </div>

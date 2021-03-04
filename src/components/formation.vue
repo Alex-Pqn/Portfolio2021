@@ -98,8 +98,8 @@ export default {
   flex-direction: column;
   align-items: center;
   font-family: "Noto Sans KR", sans-serif;
-  scroll-margin-top: 5em;
-  padding-bottom: 25px;
+  scroll-margin-top: 2em;
+  padding: 75px 0 25px;
   background-image: radial-gradient(
       circle 8px at 80% 68%,
       rgb(143, 94, 212) 0%,
@@ -212,14 +212,16 @@ export default {
   &__timeline {
     position: absolute;
     background-color: $timeline_formation-part;
+    z-index: 1;
     height: 100%;
-    width: 3.5px;
+    width: 3.8px;
   }
 
   // timeline end
   &__timeline-end {
+    margin-top: 5px;
     p {
-      color: rgb(153, 19, 180);
+      color: rgb(180, 35, 209);
       font-size: 1.5em;
     }
   }

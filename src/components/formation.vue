@@ -31,6 +31,10 @@
         :description="formation.description"
         :date="formation.date"
         :img="formation.img"
+        data-aos="slide-up"
+        data-aos-offset="-5"
+        data-aos-duration="750"
+        :data-aos-delay="index * 150"
       />
       <!-- timeline -->
       <div class="formation__timeline"></div>

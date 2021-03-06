@@ -98,8 +98,8 @@ export default {
   flex-direction: column;
   align-items: center;
   font-family: "Noto Sans KR", sans-serif;
-  scroll-margin-top: 2em;
-  padding: 75px 0 25px;
+  scroll-margin-top: 0.75em;
+  padding: 75px 0 50px;
   background-image: radial-gradient(
       circle 8px at 80% 68%,
       rgb(143, 94, 212) 0%,
@@ -190,20 +190,18 @@ export default {
   &__title {
     text-align: center;
     padding-right: 25px;
-    margin-bottom: 25px;
     h1 {
       display: flex;
-      border-top: 1px solid rgb(179, 38, 207);
-      border-bottom: 1px solid rgb(179, 38, 207);
-      padding: 0 50px 10px 50px;
+      border-bottom: 3px solid $timeline_formation-part;
+      padding: 0 50px 15px 50px;
       font-size: 3.7em;
       letter-spacing: 2px;
       word-spacing: 3px;
-      color: rgb(179, 38, 207);
+      color: rgb(180, 66, 202);
       svg {
-        fill: rgb(179, 38, 207);
+        fill: rgb(165, 57, 187);
         width: 80px;
-        margin: 0 25px 0 35px;
+        margin: 8px 25px 0 35px;
       }
     }
   }
@@ -214,7 +212,7 @@ export default {
     background-color: $timeline_formation-part;
     z-index: 1;
     height: 100%;
-    width: 3.8px;
+    width: 3px;
   }
 
   // timeline end

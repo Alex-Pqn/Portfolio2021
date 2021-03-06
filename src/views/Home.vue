@@ -25,6 +25,9 @@
 
   <!-- cv part -->
   <cvComponent />
+
+  <!-- contact part -->
+  <contactComponent />
 </template>
 
 <script>
@@ -35,6 +38,7 @@ import skillComponent from "@/components/skill.vue";
 import portfolioComponent from "@/components/portfolio.vue";
 import formationComponent from "@/components/formation.vue";
 import cvComponent from "@/components/cv.vue";
+import contactComponent from "@/components/contact.vue";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -48,7 +52,8 @@ export default {
     skillComponent,
     portfolioComponent,
     formationComponent,
-    cvComponent
+    cvComponent,
+    contactComponent
   },
   beforeMount() {
     AOS.init({

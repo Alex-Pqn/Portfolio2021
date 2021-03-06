@@ -8,4 +8,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.contact {
+  height: 50vh;
+}
+</style>

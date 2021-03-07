@@ -252,7 +252,7 @@ export default {
     position: relative;
     width: 370px;
     height: 450px;
-    animation: backgroundFade 16s, borderFade 27s;
+    animation: backgroundFade 16s, borderFade 35s;
     animation-fill-mode: forwards;
     clip-path: polygon(
       0% 0%,

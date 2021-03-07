@@ -275,8 +275,7 @@ export default {
     }
   }
   ::before {
-    transition-property: all;
-    transition-duration: 250ms;
+    transition: all 250ms ease-in-out;
     position: absolute;
     content: "";
     right: 0;
@@ -294,8 +293,7 @@ export default {
     height: 100%;
 
     svg {
-      transition-property: all;
-      transition-duration: 250ms;
+      transition: all 250ms ease-in-out;
       width: 30px;
       opacity: 0;
     }
@@ -323,8 +321,7 @@ export default {
   align-items: center;
   position: fixed;
   z-index: 9999;
-  transition-property: all;
-  transition-duration: 1s;
+  transition: all 1s ease-in-out;
   left: 0;
   top: 0;
   width: 100%;
@@ -340,8 +337,7 @@ export default {
   width: 44%;
   padding: 7px;
   border-bottom: 5px solid rgb(138, 50, 209);
-  transition-property: all;
-  transition-duration: 300ms;
+  transition: all 300ms ease-in-out;
   margin-top: 110em;
 
   // header
@@ -420,8 +416,7 @@ export default {
           width: 27px;
           margin-left: 10px;
           &:hover {
-            transition-property: all;
-            transition-duration: 200ms;
+            transition: all 200ms ease-in-out;
             opacity: 0.8;
           }
         }

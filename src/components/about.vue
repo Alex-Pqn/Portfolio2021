@@ -1,7 +1,6 @@
 <template>
   <!-- about container -->
   <section id="about" class="about-container">
-    
     <!-- hobbie circle : drone -->
     <div
       class="hobbie-circle"
@@ -27,7 +26,7 @@
         </svg>
       </p>
     </div>
-    
+
     <!-- hobbie circle : test2 -->
     <div
       class="hobbie-circle"
@@ -53,7 +52,7 @@
         </svg>
       </p>
     </div>
-    
+
     <!-- hobbie circle : test3 -->
     <div
       class="hobbie-circle"
@@ -150,8 +149,7 @@ export default {
 
   &:hover {
     img {
-      transition-property: all;
-      transition-duration: 250ms;
+      transition: all 250ms ease-in-out;
       opacity: 0.6;
     }
     p {

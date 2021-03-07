@@ -303,8 +303,7 @@ export default {
       background-color: rgba(82, 0, 114, 0.15);
       border: 1px solid rgba(255, 255, 255, 0.75);
       color: white;
-      transition-property: all;
-      transition-duration: 350ms;
+      transition: all 350ms ease-in-out;
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.1) !important;

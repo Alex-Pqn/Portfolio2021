@@ -88,7 +88,7 @@ header {
   z-index: 999;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.41em;
-  transition-property: all;
+  transition: all;
 
   // credit
   p {
@@ -139,8 +139,7 @@ header {
       color: rgb(144, 70, 173);
       &:hover {
         opacity: 0.7;
-        transition-property: all;
-        transition-duration: 350ms;
+        transition: all 350ms ease-in-out;
       }
     }
   }
@@ -160,8 +159,7 @@ header {
       color: rgb(128, 128, 128);
       &:hover {
         opacity: 0.8;
-        transition-property: all;
-        transition-duration: 250ms;
+        transition: all 250ms ease-in-out;
       }
     }
     span {

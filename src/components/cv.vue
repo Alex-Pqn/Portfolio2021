@@ -27,7 +27,7 @@
     <!-- download -->
     <div class="cv__download">
       <button>
-        <a href="">
+        <a rel="noreferrer" href="">
           Télécharger
         </a>
       </button>

@@ -9,26 +9,26 @@
     <nav>
       <ul>
         <li>
-          <a href="#about"> <span>à</span> propos </a>
+          <a rel="noreferrer" href="#about"> <span>à</span> propos </a>
         </li>
         <li>
-          <a href="#skill"> <span>C</span>ompétences </a>
+          <a rel="noreferrer" href="#skill"> <span>C</span>ompétences </a>
         </li>
         <li>
-          <a href="#portfolio"> <span>P</span>ortfolio </a>
+          <a rel="noreferrer" href="#portfolio"> <span>P</span>ortfolio </a>
         </li>
         <li>
-          <a href="#formation"> <span>F</span>ormation </a>
+          <a rel="noreferrer" href="#formation"> <span>F</span>ormation </a>
         </li>
         <li>
-          <a href="#cv">
+          <a rel="noreferrer" href="#cv">
             <span>
               CV
             </span>
           </a>
         </li>
         <li>
-          <a href="#contact"> <span>C</span>ontact </a>
+          <a rel="noreferrer" href="#contact"> <span>C</span>ontact </a>
         </li>
       </ul>
     </nav>

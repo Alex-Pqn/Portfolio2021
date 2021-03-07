@@ -126,7 +126,12 @@
             />
           </div>
           <div class="portfolio-modal__content__right__informations">
-            <a v-if="githubUrl" target="_blank" :href="githubUrl">
+            <a
+              v-if="githubUrl"
+              target="_blank"
+              rel="noreferrer"
+              :href="githubUrl"
+            >
               <svg
                 id=""
                 aria-hidden="true"
@@ -141,7 +146,7 @@
                 ></path>
               </svg>
             </a>
-            <a v-if="siteUrl" target="_blank" :href="siteUrl">
+            <a v-if="siteUrl" target="_blank" rel="noreferrer" :href="siteUrl">
               <svg
                 aria-hidden="true"
                 focusable="false"

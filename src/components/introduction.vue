@@ -46,12 +46,12 @@
       <!-- redirect about -->
       <div class="redirect-about">
         <p>
-          <a href="#about">
+          <a rel="noreferrer" href="#about">
             Laissez-moi
           </a>
           me présenter
         </p>
-        <a href="#about">
+        <a rel="noreferrer" href="#about">
           <svg viewBox="0 0 512 512">
             <path
               fill="currentColor"

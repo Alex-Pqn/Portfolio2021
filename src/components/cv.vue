@@ -1,5 +1,5 @@
 <template>
-  <!-- cv -->
+  <!-- cv container -->
   <section class="cv" id="cv">
     <video autoplay loop muted>
       <source src="@/assets/drone_hobbie-video.mp4" type="video/mp4" />
@@ -42,6 +42,7 @@ export default {
 </script>
 
 <style lang="scss">
+// cv container
 .cv {
   display: flex;
   flex-direction: column;

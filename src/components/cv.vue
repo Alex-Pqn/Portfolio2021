@@ -71,11 +71,11 @@ export default {
   }
   // title
   &__title {
-    margin-bottom: 35px;
+    margin: 30px 0 35px;
     z-index: 999;
     h1 {
       font-size: 4em;
-      color: rgba(255, 255, 255, 0.87);
+      color: rgba(255, 255, 255, 0.9);
       & span {
         color: $main-color_cv-part;
         border-top: 8px solid $main-color_cv-part;
@@ -86,20 +86,20 @@ export default {
   }
   // download
   &__download {
-    margin-bottom: 50px;
     z-index: 999;
+    margin-bottom: 50px;
 
     button {
       font-size: 2em;
       padding: 15px 25px;
       border-radius: 0.3em;
       cursor: pointer;
-      background-color: rgba(255, 255, 255, 0.85);
+      background-color: rgba(255, 255, 255, 0.95);
       border: 3px solid rgba(255, 255, 255, 0);
       &:hover {
         transition: all 500ms ease-out;
         transform: scale(0.9);
-        background-color: rgb(119, 0, 230);
+        background-color: rgb(147, 31, 255);
         border-radius: 5em;
         border: 3px solid rgb(255, 255, 255);
         a {

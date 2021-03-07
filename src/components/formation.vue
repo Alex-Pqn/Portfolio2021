@@ -65,21 +65,21 @@ export default {
         {
           name: "2nd en Bac Pro MELEC",
           img: "Lycee_icon.jpg",
-          description: "Une année en 2nd Bac PRO MELEC au lycée la Saulaie.",
+          description: "2nd en Bac PRO MELEC au lycée la Saulaie.",
           date: "2019-2020"
         },
         {
           name: "Brevet des collèges",
           img: "College_icon.jpg",
           description:
-            "Diplôme national du brevet des collèges à Les Echelles.",
+            "Diplôme national du brevet des collèges à Béatrice de Savoie, Les Echelles.",
           date: "2019"
         },
         {
           name: "Stage en informatique",
           img: "GC-Informatique_icon.jpg",
           description:
-            "Stage d'observation durant ma 4ème à GC Informatique à les Echelles.",
+            "Stage d'observation de 4ème à GC Informatique, à les Echelles.",
           date: "2018"
         }
       ]

@@ -28,6 +28,9 @@
 
   <!-- contact part -->
   <contactComponent />
+
+  <!-- footer part -->
+  <footerComponent />
 </template>
 
 <script>
@@ -39,6 +42,7 @@ import portfolioComponent from "@/components/portfolio.vue";
 import formationComponent from "@/components/formation.vue";
 import cvComponent from "@/components/cv.vue";
 import contactComponent from "@/components/contact.vue";
+import footerComponent from "@/components/footer.vue";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -53,7 +57,8 @@ export default {
     portfolioComponent,
     formationComponent,
     cvComponent,
-    contactComponent
+    contactComponent,
+    footerComponent
   },
   beforeMount() {
     AOS.init({

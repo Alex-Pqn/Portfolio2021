@@ -98,8 +98,8 @@ export default {
   flex-direction: column;
   align-items: center;
   font-family: "Noto Sans KR", sans-serif;
-  scroll-margin-top: 0.75em;
-  padding: 75px 0 50px;
+  scroll-margin-top: 3.5em;
+  padding: 25px 0 50px;
   background-image: radial-gradient(
       circle 8px at 80% 68%,
       rgb(143, 94, 212) 0%,

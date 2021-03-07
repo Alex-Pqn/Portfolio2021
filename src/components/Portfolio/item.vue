@@ -264,8 +264,8 @@ export default {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 320px;
-  width: 300px;
+  height: 310px;
+  width: 290px;
   margin: 13px 20px;
   border: 1px solid rgb(148, 61, 199);
   background-size: cover;

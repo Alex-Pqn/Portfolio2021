@@ -84,7 +84,7 @@ export default {
   justify-content: left;
   align-items: center;
   width: 50%;
-  margin-top: 50px;
+  margin-top: 35px;
   margin-bottom: 20px;
   z-index: 10;
 

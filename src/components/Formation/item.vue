@@ -1,8 +1,8 @@
 <template>
   <!-- formation item -->
-  <div class="formation-item" :id="`formation-container-${id}`">
+  <div class="formation-item">
     <!-- content -->
-    <div class="formation-item__content" :id="`formation-content-${id}`">
+    <div class="formation-item__content">
       <!-- date -->
       <div class="formation-item__content__date">
         <p>
@@ -58,12 +58,9 @@ export default {
   },
   mounted() {
     let itemId = this.id;
-
     if (!Number.isInteger(itemId / 2)) {
-      let itemContainer = document.getElementById(
-        `formation-container-${itemId}`
-      );
-      let itemContent = document.getElementById(`formation-content-${itemId}`);
+      let itemContainer = document.querySelectorAll(".formation-item")[itemId];
+      let itemContent = itemContainer.childNodes[1];
 
       itemContent.style.textAlign = "left";
       itemContainer.style.flexDirection = "row-reverse";
@@ -98,7 +95,7 @@ export default {
     // date
     &__date {
       p {
-        font-size: 1.37em;
+        font-size: 1.4em;
         line-height: 17px;
         color: rgb(160, 50, 194);
         & span {
@@ -109,15 +106,15 @@ export default {
     // name
     &__name {
       p {
-        line-height: 45px;
-        font-size: 1.6em;
+        line-height: 48px;
+        font-size: 1.65em;
         color: rgb(176, 56, 212);
       }
     }
     // description
     &__description {
       p {
-        font-size: 1.2em;
+        font-size: 1.25em;
         color: rgb(0, 0, 0);
       }
     }

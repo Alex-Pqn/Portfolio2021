@@ -157,7 +157,7 @@ export default {
       transparent 100%
     ),
     radial-gradient(
-      circle 12px at 44% 56%,
+      circle 12px at 46% 54%,
       rgb(143, 94, 212) 0%,
       rgb(143, 94, 212) 50%,
       transparent 50%,
@@ -192,7 +192,8 @@ export default {
     padding-right: 25px;
     h1 {
       display: flex;
-      border-bottom: 3px solid $timeline_formation-part;
+      border-top: 1px solid $timeline_formation-part;
+      border-bottom: 1px solid $timeline_formation-part;
       padding: 0 50px 15px 50px;
       font-size: 3.7em;
       letter-spacing: 2px;

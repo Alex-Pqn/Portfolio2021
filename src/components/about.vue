@@ -1,6 +1,11 @@
 <template>
   <!-- about container -->
   <section id="about" class="about-container">
+    <!-- hobbie video container -->
+    <video class="hobbie-video" id="hobbie-video_drone" autoplay loop muted>
+      <source src="@/assets/drone_hobbie-video-1920x750.mp4" type="video/mp4" />
+    </video>
+
     <!-- hobbie circle : drone -->
     <div
       class="hobbie-circle"
@@ -153,6 +158,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+// hobbie video container
+.hobbie-video {
+  height: 100%;
+  width: 0;
+  opacity: 0.5;
+  position: absolute;
+  object-fit: cover;
+  transition: all 350ms ease-in-out;
+  z-index: 99;
+  border-top: 5px solid #a557d8;
+}
+
 // hobbies circles (position absolute)
 .hobbie-circle {
   position: absolute;

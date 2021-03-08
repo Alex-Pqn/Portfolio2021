@@ -76,23 +76,7 @@
       data-aos-duration="750"
       data-aos-delay="300"
       data-aos-offset="200"
-    >
-      <img src="../assets/CV.png" alt="" />
-      <p>
-        Drone
-        <svg viewBox="0 0 512 512">
-          <g>
-            <circle cx="256" cy="379.396" r="19.429" />
-            <path
-              d="m512 76.533v-30h-137.714v30h53.856v48.071h-25.214v25.214h-85.571l-26.929-53.857h-68.857l-26.929 53.857h-85.571v-25.214h-25.214v-48.071h53.857v-30h-137.714v30h53.857v48.071h-25.214v40.214c0 22.21 18.005 40.214 40.214 40.214 16.906 0 31.365-10.437 37.312-25.214h54.046l19.428 38.857h152.714l19.428-38.857h54.046c5.947 14.777 20.406 25.214 37.312 25.214 22.21 0 40.214-18.004 40.214-40.214v-40.214h-25.215v-48.071z"
-            />
-            <path
-              d="m342.072 293.325h-47.553v-44.649h-72.947v44.649h-51.643c-19.014 0-34.429 15.414-34.429 34.428v103.286c0 19.014 15.414 34.429 34.429 34.429h172.143c19.014 0 34.428-15.414 34.428-34.429v-103.286c0-19.014-15.414-34.428-34.428-34.428zm-86.072 135.5c-27.255 0-49.429-22.174-49.429-49.429s22.174-49.429 49.429-49.429 49.429 22.174 49.429 49.429-22.174 49.429-49.429 49.429z"
-            />
-          </g>
-        </svg>
-      </p>
-    </div>
+    ></div>
 
     <!-- profile pic -->
     <div class="profile-pic">
@@ -149,6 +133,7 @@
 
 <script>
 export default {
+  name: "about",
   methods: {
     displayHobbie: function(id) {
       document.getElementById(id).style.width = "100%";
@@ -163,6 +148,63 @@ export default {
 </script>
 
 <style scoped lang="scss">
+// about container
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  scroll-margin-top: 10rem;
+}
+
+// profile pic
+.profile-pic {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+  padding-top: 50px;
+  img {
+    height: 645px;
+  }
+}
+
+// presentation
+.presentation {
+  position: relative;
+  width: 23%;
+  padding-left: 30px;
+  padding-bottom: 110px;
+  padding-top: 50px;
+
+  // text
+  &__text {
+    p {
+      line-height: 42px;
+      letter-spacing: 1px;
+      margin: 20px 0;
+      font-size: 1.87em;
+      color: rgb(154, 65, 172);
+      span {
+        font-size: 1.5em;
+      }
+    }
+
+    span p {
+      color: rgb(110, 50, 122);
+      border-left: 5px solid rgb(110, 50, 122);
+      padding-left: 13px;
+    }
+  }
+
+  // quote icon
+  svg {
+    position: absolute;
+    fill: rgba(199, 116, 231, 0.17);
+    width: 90px;
+    margin: -15px 0 0 -23px;
+  }
+}
+
 // hobbie video container
 .hobbie-video {
   height: 100%;
@@ -181,27 +223,38 @@ export default {
   border-radius: 50%;
   text-align: center;
   background-color: black;
-  cursor: pointer;
+  z-index: 999;
 
   &:hover {
-    img {
+    .hobbie-container {
+      width: 100% !important;
+    }
+    img,
+    video {
       transition: all 250ms ease-in-out;
       opacity: 0.6;
     }
     p {
-      display: flex !important;
+      transition: all 500ms ease-in-out;
+      opacity: 1;
     }
   }
-
   img {
     width: 100%;
     border-radius: 50%;
   }
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
   p {
-    display: none !important;
+    display: flex;
     position: absolute;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
     right: 0;
     left: 0;
     color: white;
@@ -213,7 +266,7 @@ export default {
 
 // hobbie circle : drone
 #hobbie-drone {
-  border: 20px solid #8b588e;
+  border: 15px solid #8b588e;
   height: 400px;
   width: 400px;
   left: -75px;

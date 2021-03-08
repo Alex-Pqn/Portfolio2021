@@ -17,7 +17,12 @@
       @mouseenter="displayHobbie('hobbie-video_drone')"
       @mouseleave="closeHobbie('hobbie-video_drone')"
     >
-      <img src="../assets/CV.png" alt="" />
+      <video autoplay loop muted>
+        <source
+          src="@/assets/drone_hobbie-video-400x400.mp4"
+          type="video/mp4"
+        />
+      </video>
       <p>
         Drone
         <svg viewBox="0 0 512 512">

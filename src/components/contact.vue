@@ -3,7 +3,12 @@
   <section class="contact" id="contact">
     <div class="contact__content">
       <!-- title -->
-      <div class="contact__content__title">
+      <div
+        class="contact__content__title"
+        data-aos="fade-right"
+        data-aos-duration="500"
+        data-aos-offset="150"
+      >
         <h1>
           Contactez-moi !
         </h1>
@@ -22,7 +27,12 @@
       </div>
       <form :onsubmit="sendMail">
         <!-- subject -->
-        <div class="contact__content__subject">
+        <div
+          class="contact__content__subject"
+          data-aos="fade-right"
+          data-aos-duration="500"
+          data-aos-offset="200"
+        >
           <label for="subject">
             <svg
               aria-hidden="true"
@@ -33,7 +43,6 @@
               viewBox="0 0 448 512"
             >
               <path
-                fill="currentColor"
                 d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
               ></path>
             </svg>
@@ -47,7 +56,12 @@
           />
         </div>
         <!-- message -->
-        <div class="contact__content__message">
+        <div
+          class="contact__content__message"
+          data-aos="fade-right"
+          data-aos-duration="500"
+          data-aos-offset="150"
+        >
           <label for="body">
             <svg
               aria-hidden="true"
@@ -58,7 +72,6 @@
               viewBox="0 0 448 512"
             >
               <path
-                fill="currentColor"
                 d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
               ></path>
             </svg>
@@ -68,21 +81,28 @@
         </div>
 
         <!-- submit -->
-        <button type="submit">
-          Envoyer
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="location-arrow"
-            role="img"
-            viewBox="0 0 512 512"
-          >
-            <path
-              d="M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z"
-            ></path>
-          </svg>
-        </button>
+        <div
+          class="contact__content__submit"
+          data-aos="fade-right"
+          data-aos-duration="500"
+          data-aos-offset="-5"
+        >
+          <button>
+            Envoyer
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="location-arrow"
+              role="img"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </form>
     </div>
   </section>
@@ -111,7 +131,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-margin-top: 6.5em;
+  scroll-margin-top: 7.3em;
   padding: 50px 0;
 
   // content
@@ -127,12 +147,12 @@ export default {
       border-radius: 0.3em;
 
       h1 {
-        font-size: 3.8em;
+        font-size: 3.6em;
         letter-spacing: 3px;
         color: white;
       }
       svg {
-        width: 62px;
+        width: 60px;
         fill: white;
       }
     }
@@ -145,7 +165,7 @@ export default {
       label {
         display: flex;
         color: rgb(120, 20, 202);
-        font-size: 1.8em;
+        font-size: 1.7em;
         svg {
           width: 23px;
           fill: $main-color_contact-part;
@@ -158,7 +178,7 @@ export default {
         font-family: Arial, Helvetica, sans-serif;
         background-color: rgba(177, 177, 177, 0.4);
         border-left: 7px solid $main-color_contact-part;
-        font-size: 1.6em;
+        font-size: 1.5em;
         padding: 12px;
         border-radius: 0.15em;
         color: rgba(0, 0, 0, 0.75);
@@ -175,9 +195,9 @@ export default {
     &__subject {
       margin: 15px 0 20px;
       input {
-        height: 50px;
+        height: 48px;
         &:focus {
-          height: 55px;
+          height: 52px;
         }
       }
     }
@@ -193,23 +213,25 @@ export default {
       }
     }
     // submit button
-    button[type="submit"] {
-      display: flex;
-      align-items: center;
-      margin-top: 30px;
-      padding: 12px 17px;
-      font-size: 1.55em;
-      background-color: $main-color_contact-part;
-      color: white;
-      border: none;
-      border-radius: 0.25em;
-      &:hover {
-        opacity: 0.85;
-      }
-      svg {
-        fill: white;
-        padding-left: 10px;
-        width: 32px;
+    &__submit {
+      margin-top: 27px;
+      button {
+        display: flex;
+        align-items: center;
+        padding: 12px 17px;
+        font-size: 1.5em;
+        background-color: $main-color_contact-part;
+        color: white;
+        border: none;
+        border-radius: 0.25em;
+        &:hover {
+          opacity: 0.8;
+        }
+        svg {
+          fill: white;
+          padding-left: 10px;
+          width: 32px;
+        }
       }
     }
   }

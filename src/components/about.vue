@@ -27,28 +27,29 @@
       </p>
     </div>
 
-    <!-- hobbie circle : test2 -->
+    <!-- hobbie circle : montage -->
     <div
       class="hobbie-circle"
-      id="test2"
-      data-aos="fade-right"
+      id="hobbie-montage"
+      data-aos="fade-up"
       data-aos-duration="750"
-      data-aos-delay="300"
+      data-aos-delay="500"
       data-aos-offset="200"
     >
       <img src="../assets/CV.png" alt="" />
       <p>
-        Drone
-        <svg viewBox="0 0 512 512">
-          <g>
-            <circle cx="256" cy="379.396" r="19.429" />
-            <path
-              d="m512 76.533v-30h-137.714v30h53.856v48.071h-25.214v25.214h-85.571l-26.929-53.857h-68.857l-26.929 53.857h-85.571v-25.214h-25.214v-48.071h53.857v-30h-137.714v30h53.857v48.071h-25.214v40.214c0 22.21 18.005 40.214 40.214 40.214 16.906 0 31.365-10.437 37.312-25.214h54.046l19.428 38.857h152.714l19.428-38.857h54.046c5.947 14.777 20.406 25.214 37.312 25.214 22.21 0 40.214-18.004 40.214-40.214v-40.214h-25.215v-48.071z"
-            />
-            <path
-              d="m342.072 293.325h-47.553v-44.649h-72.947v44.649h-51.643c-19.014 0-34.429 15.414-34.429 34.428v103.286c0 19.014 15.414 34.429 34.429 34.429h172.143c19.014 0 34.428-15.414 34.428-34.429v-103.286c0-19.014-15.414-34.428-34.428-34.428zm-86.072 135.5c-27.255 0-49.429-22.174-49.429-49.429s22.174-49.429 49.429-49.429 49.429 22.174 49.429 49.429-22.174 49.429-49.429 49.429z"
-            />
-          </g>
+        Montage Vidéo
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="photo-video"
+          role="img"
+          viewBox="0 0 640 512"
+        >
+          <path
+            d="M608 0H160a32 32 0 0 0-32 32v96h160V64h192v320h128a32 32 0 0 0 32-32V32a32 32 0 0 0-32-32zM232 103a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9V73a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm352 208a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9v-30a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm0-104a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9v-30a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm0-104a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9V73a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm-168 57H32a32 32 0 0 0-32 32v288a32 32 0 0 0 32 32h384a32 32 0 0 0 32-32V192a32 32 0 0 0-32-32zM96 224a32 32 0 1 1-32 32 32 32 0 0 1 32-32zm288 224H64v-32l64-64 32 32 128-128 96 96z"
+          ></path>
         </svg>
       </p>
     </div>
@@ -192,35 +193,18 @@ export default {
     }
   }
 }
-// hobbie circle : test2
-#test2 {
-  border: 30px solid #734a75;
-  height: 265px;
-  width: 265px;
-  left: 230px;
-  bottom: -120px;
-  p {
-    font-size: 1.35em;
-    line-height: 37px;
-    top: 12%;
-    svg {
-      height: 35px;
-      width: 35px;
-    }
-  }
-}
-// hobbie circle : test3
-#test3 {
+// hobbie circle : montage video
+#hobbie-montage {
   border: 20px solid #89538a;
-  height: 235px;
-  width: 235px;
-  right: 170px;
+  height: 275px;
+  width: 275px;
+  right: 130px;
   bottom: -110px;
 
   p {
-    font-size: 1.6em;
-    line-height: 35px;
-    top: 12%;
+    font-size: 1.5em;
+    line-height: 45px;
+    top: 17%;
     svg {
       height: 35px;
       width: 35px;

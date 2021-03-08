@@ -235,11 +235,12 @@ export default {
   scroll-margin-top: 8rem;
   height: 90vh;
   font-family: "Syne", sans-serif;
+  z-index: 999;
   background-image: radial-gradient(
-      circle at 12.5% 0%,
+      circle at 10% 0%,
       #734a75 0%,
-      #734a75 8%,
-      transparent 8%,
+      #734a75 7.5%,
+      transparent 7.5%,
       transparent 100%
     ),
     radial-gradient(

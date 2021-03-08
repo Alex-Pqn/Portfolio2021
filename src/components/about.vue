@@ -9,6 +9,8 @@
       data-aos-duration="750"
       data-aos-delay="150"
       data-aos-offset="200"
+      @mouseenter="displayHobbie('hobbie-video_drone')"
+      @mouseleave="closeHobbie('hobbie-video_drone')"
     >
       <img src="../assets/CV.png" alt="" />
       <p>
@@ -137,7 +139,16 @@
 
 <script>
 export default {
-  name: "about"
+  methods: {
+    displayHobbie: function(id) {
+      document.getElementById(id).style.width = "100%";
+      document.getElementById(id).style.opacity = "1";
+    },
+    closeHobbie: function(id) {
+      document.getElementById(id).style.width = "0";
+      document.getElementById(id).style.opacity = ".5";
+    }
+  }
 };
 </script>
 

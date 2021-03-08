@@ -273,14 +273,16 @@ export default {
   &:hover {
     cursor: pointer;
     ::before {
-      background-color: rgba(0, 0, 0, 0.25);
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.07);
     }
     svg {
       opacity: 100%;
     }
   }
   ::before {
-    transition: all 250ms ease-in-out;
+    transition: all 350ms ease-in-out;
+    width: 0;
     position: absolute;
     content: "";
     right: 0;

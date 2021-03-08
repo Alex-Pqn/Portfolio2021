@@ -2,7 +2,7 @@
   <!-- cv container -->
   <section class="cv" id="cv">
     <video autoplay loop muted>
-      <source src="@/assets/drone_hobbie-video.mp4" type="video/mp4" />
+      <source src="@/assets/drone_hobbie-video-1920x750.mp4" type="video/mp4" />
     </video>
 
     <!-- icon -->
@@ -54,7 +54,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.9);
   border-top: 7px solid $main-color_cv-part;
   border-bottom: 7px solid $main-color_cv-part;
-  height: 700px;
+  height: 750px;
   z-index: 99;
 
   video {
@@ -66,16 +66,16 @@ export default {
   }
   // icon
   &__icon {
-    width: 62px;
+    width: 68px;
     z-index: 999;
     fill: $main-color_cv-part;
   }
   // title
   &__title {
-    margin: 30px 0 35px;
+    margin: 40px 0 45px;
     z-index: 999;
     h1 {
-      font-size: 4em;
+      font-size: 4.5em;
       color: rgba(255, 255, 255, 0.9);
       & span {
         color: $main-color_cv-part;
@@ -88,10 +88,10 @@ export default {
   // download
   &__download {
     z-index: 999;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 
     button {
-      font-size: 2em;
+      font-size: 2.1em;
       padding: 15px 25px;
       border-radius: 0.3em;
       cursor: pointer;

@@ -54,13 +54,15 @@
       </p>
     </div>
 
-    <!-- hobbie circle : test3 -->
+    <!-- decoration circles -->
+    <div class="hobbie-circle" id="deco-circle_1"></div>
+    <div class="hobbie-circle" id="deco-circle_2"></div>
     <div
       class="hobbie-circle"
-      id="test3"
-      data-aos="fade-up"
+      id="deco-circle_3"
+      data-aos="fade-right"
       data-aos-duration="750"
-      data-aos-delay="500"
+      data-aos-delay="300"
       data-aos-offset="200"
     >
       <img src="../assets/CV.png" alt="" />
@@ -211,74 +213,30 @@ export default {
     }
   }
 }
-
-// about container
-.about-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  scroll-margin-top: 10rem;
-  padding-top: 25px;
-  background-image: radial-gradient(
-      circle at 50% 103%,
-      #89538a 0%,
-      #89538a 5%,
-      transparent 4%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 77.5% 100%,
-      #734a75 0%,
-      #734a75 4.5%,
-      transparent 4%,
-      transparent 100%
-    );
+// decoration circles
+#deco-circle_1 {
+  background-color: #734a75;
+  height: 245px;
+  width: 260px;
+  left: 190px;
+  bottom: -125px;
 }
-
-// profile pic
-.profile-pic {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 40px;
-  img {
-    height: 570px;
-  }
+#deco-circle_2 {
+  background-color: #89538a;
+  height: 110px;
+  width: 110px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -68px;
 }
-
-// presentation
-.presentation {
-  position: relative;
-  width: 23%;
-  padding-left: 30px;
-  padding-bottom: 45px;
-
-  // text
-  &__text {
-    p {
-      line-height: 42px;
-      letter-spacing: 1px;
-      margin: 10px 0;
-      font-size: 1.75em;
-      color: rgb(154, 65, 172);
-      span {
-        font-size: 1.5em;
-      }
-    }
-
-    span p {
-      color: rgb(110, 50, 122);
-      border-left: 5px solid rgb(110, 50, 122);
-      padding-left: 13px;
-    }
-  }
-
-  // quote icon
-  svg {
-    position: absolute;
-    fill: rgba(199, 116, 231, 0.17);
-    width: 90px;
-    margin: -15px 0 0 -23px;
-  }
+#deco-circle_3 {
+  background-color: #734a75;
+  height: 185px;
+  width: 185px;
+  right: 340px;
+  bottom: -90px;
 }
 </style>

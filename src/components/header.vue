@@ -153,6 +153,7 @@ header {
   width: 60%;
   opacity: 0;
   transition-duration: 500ms;
+  z-index: 9999;
 
   nav ul li {
     a {

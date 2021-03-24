@@ -49,7 +49,7 @@
       data-aos-offset="200"
       v-on:click="displayHobbieVideo()"
     >
-      <img src="../assets/CV.png" alt="" />
+      <img src="../assets/About/montage_hobbie-img-400x400.jpg" alt="" />
       <p>
         Montage Vidéo
         <svg

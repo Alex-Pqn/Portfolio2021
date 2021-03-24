@@ -31,6 +31,7 @@
         :description="formation.description"
         :date="formation.date"
         :img="formation.img"
+        :link="formation.link"
         data-aos="slide-up"
         data-aos-offset="-5"
         data-aos-duration="750"
@@ -57,18 +58,21 @@ export default {
     return {
       items: [
         {
+          link: "https://www.francecompetences.fr/recherche/rncp/32173/",
           name: "Bac +2 Développeur Web",
           img: "OpenClassrooms_icon.jpg",
           description: "Certification RNCP de niveau 5 OpenClassrooms.",
           date: "2020-2021"
         },
         {
+          link: "https://lasaulaie.ent.auvergnerhonealpes.fr/",
           name: "2nd en Bac Pro MELEC",
           img: "Lycee_icon.jpg",
           description: "2nd en Bac PRO MELEC au lycée la Saulaie.",
           date: "2019-2020"
         },
         {
+          link: "https://college-bds-les-echelles.web.ac-grenoble.fr/",
           name: "Brevet des collèges",
           img: "College_icon.jpg",
           description:
@@ -76,6 +80,7 @@ export default {
           date: "2019"
         },
         {
+          link: "https://www.gc-informatique.com/",
           name: "Stage en informatique",
           img: "GC-Informatique_icon.jpg",
           description:

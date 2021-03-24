@@ -26,7 +26,9 @@
     </div>
     <!-- img -->
     <div class="formation-item__img">
-      <img :src="getAssetPath(img)" alt="" />
+      <a rel="noreferrer" target="_blank" :href="link">
+        <img :src="getAssetPath(img)" alt="" />
+      </a>
     </div>
   </div>
 </template>
@@ -52,6 +54,10 @@ export default {
       required: true
     },
     img: {
+      type: String,
+      required: true
+    },
+    link: {
       type: String,
       required: true
     }

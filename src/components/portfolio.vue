@@ -23,7 +23,6 @@
         <portfolioItemComponent
           :id="index"
           :title="project.title"
-          :img="project.img"
           :description="project.description"
           :technologies="project.technologies"
           :githubUrl="project.githubUrl"
@@ -154,8 +153,7 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: -100px;
-  height: 100vh;
-  padding: 35px 0;
+  padding: 35px 0 75px;
   scroll-margin-top: 20px;
   font-family: "Noto Sans KR", sans-serif;
   background-image: radial-gradient(

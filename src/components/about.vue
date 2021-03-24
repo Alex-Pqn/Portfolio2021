@@ -98,7 +98,6 @@
       data-aos="fade-right"
       data-aos-duration="750"
       data-aos-delay="300"
-      data-aos-offset="200"
     ></div>
 
     <!-- profile pic -->
@@ -192,40 +191,40 @@ export default {
 .about-container {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
   position: relative;
-  scroll-margin-top: 10rem;
+  scroll-margin-top: 9.7rem;
+  height: 750px;
 }
 
 // profile pic
 .profile-pic {
   display: flex;
   justify-content: flex-end;
+  align-self: flex-end;
   padding-right: 40px;
-  padding-top: 50px;
   img {
-    height: 645px;
+    height: 700px;
   }
 }
 
 // presentation
 .presentation {
   position: relative;
-  width: 23%;
+  align-self: center;
+  width: 25%;
   padding-left: 30px;
-  padding-bottom: 110px;
-  padding-top: 50px;
+  padding-bottom: 45px;
 
   // text
   &__text {
     p {
-      line-height: 42px;
+      line-height: 48px;
       letter-spacing: 1px;
       margin: 20px 0;
-      font-size: 1.87em;
+      font-size: 2.05em;
       color: rgb(154, 65, 172);
       span {
-        font-size: 1.5em;
+        font-size: 1.85em;
       }
     }
 
@@ -246,15 +245,37 @@ export default {
 }
 
 // hobbie video container
-.hobbie-video {
+#hobbie-video {
   height: 100%;
   width: 0;
-  opacity: 0.5;
+  z-index: 999;
   position: absolute;
-  object-fit: cover;
-  transition: all 350ms ease-in-out;
-  z-index: 99;
-  border-top: 5px solid #a557d8;
+  border-top: 10px solid rgb(159, 95, 196);
+  iframe {
+    transition: all 750ms ease-in-out;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+  }
+}
+// hobbie video close
+.hobbie-video_close {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  svg {
+    margin-top: 28px;
+    width: 50px;
+    fill: #5d355f;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out, height 1s ease-in-out;
+    &:hover {
+      transition: all 0.5s ease-in-out;
+      transform: rotate(180deg) scale(0.8);
+      fill: rgb(148, 30, 30);
+      cursor: pointer;
+    }
+  }
 }
 
 // hobbies circles (position absolute)
@@ -263,16 +284,12 @@ export default {
   border-radius: 50%;
   text-align: center;
   background-color: black;
-  z-index: 999;
+  z-index: 99;
 
   &:hover {
-    .hobbie-container {
-      width: 100% !important;
-    }
-    img,
-    video {
+    img {
       transition: all 250ms ease-in-out;
-      opacity: 0.6;
+      opacity: 0.5;
     }
     p {
       transition: all 500ms ease-in-out;
@@ -280,10 +297,6 @@ export default {
     }
   }
   img {
-    width: 100%;
-    border-radius: 50%;
-  }
-  video {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -311,6 +324,7 @@ export default {
   width: 400px;
   left: -75px;
   bottom: -120px;
+  cursor: pointer;
   p {
     font-size: 2em;
     line-height: 50px;
@@ -328,7 +342,7 @@ export default {
   width: 275px;
   right: 130px;
   bottom: -110px;
-
+  cursor: pointer;
   p {
     font-size: 1.5em;
     line-height: 45px;
@@ -346,9 +360,10 @@ export default {
   width: 260px;
   left: 190px;
   bottom: -125px;
+  z-index: 999;
 }
 #deco-circle_2 {
-  background-color: #89538a;
+  background-color: rgb(132, 81, 134);
   height: 110px;
   width: 110px;
   left: 0;
@@ -357,9 +372,10 @@ export default {
   margin-left: auto;
   margin-right: auto;
   bottom: -68px;
+  z-index: 999;
 }
 #deco-circle_3 {
-  background-color: #734a75;
+  background-color: rgb(138, 83, 139);
   height: 185px;
   width: 185px;
   right: 340px;

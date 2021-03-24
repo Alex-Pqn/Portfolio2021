@@ -1,10 +1,16 @@
 <template>
   <!-- about container -->
   <section id="about" class="about-container">
-    <!-- hobbie video container -->
-    <video class="hobbie-video" id="hobbie-video_drone" autoplay loop muted>
-      <source src="@/assets/drone_hobbie-video-1920x750.mp4" type="video/mp4" />
-    </video>
+    <!-- hobbie video -->
+    <div id="hobbie-video">
+      <iframe
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        :src="ytbIframeUrl"
+        frameborder="0"
+      ></iframe>
+    </div>
 
     <!-- hobbie circle : drone -->
     <div
@@ -14,8 +20,7 @@
       data-aos-duration="750"
       data-aos-delay="150"
       data-aos-offset="200"
-      @mouseenter="displayHobbie('hobbie-video_drone')"
-      @mouseleave="closeHobbie('hobbie-video_drone')"
+      v-on:click="displayHobbieVideo()"
     >
       <img src="@/assets/About/drone_hobbie-img-400x400.jpg" alt="" />
       <p>
@@ -42,6 +47,7 @@
       data-aos-duration="750"
       data-aos-delay="500"
       data-aos-offset="200"
+      v-on:click="displayHobbieVideo()"
     >
       <img src="../assets/CV.png" alt="" />
       <p>
@@ -62,7 +68,29 @@
     </div>
 
     <!-- decoration circles -->
-    <div class="hobbie-circle" id="deco-circle_1"></div>
+    <div
+      class="hobbie-circle hobbie-video_close"
+      id="deco-circle_1"
+      data-aos="fade-right"
+      data-aos-duration="750"
+      data-aos-delay="150"
+      data-aos-offset="-5"
+    >
+      <!-- integrate button to close youtube iframe -->
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="times"
+        role="img"
+        viewBox="0 0 352 512"
+        v-on:click="closeHobbieVideo()"
+      >
+        <path
+          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+        ></path>
+      </svg>
+    </div>
     <div class="hobbie-circle" id="deco-circle_2"></div>
     <div
       class="hobbie-circle"
@@ -129,14 +157,31 @@
 <script>
 export default {
   name: "about",
+  data() {
+    return {
+      ytbIframeUrl:
+        "https://www.youtube-nocookie.com/embed/UrVLw8n9f2Q?vq=hd1080&loop=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&fs=0&color=white"
+    };
+  },
   methods: {
-    displayHobbie: function(id) {
-      document.getElementById(id).style.width = "100%";
-      document.getElementById(id).style.opacity = "1";
+    displayHobbieVideo: function() {
+      const ytbIframeContainer = document.querySelector("#hobbie-video iframe");
+      ytbIframeContainer.src = `${this.ytbIframeUrl}&autoplay=1`;
+
+      document.getElementById("hobbie-video").style.width = "100%";
+      document.querySelector(".hobbie-video_close svg").style.opacity = "1";
+      ytbIframeContainer.style.opacity = "1";
     },
-    closeHobbie: function(id) {
-      document.getElementById(id).style.width = "0";
-      document.getElementById(id).style.opacity = ".5";
+    closeHobbieVideo: function() {
+      const ytbIframeContainer = document.querySelector("#hobbie-video iframe");
+
+      ytbIframeContainer.style.opacity = "0";
+      document.querySelector(".hobbie-video_close svg").style.opacity = "0";
+      setTimeout(() => {
+        document.getElementById("hobbie-video").style.width = "0";
+      }, 500);
+
+      ytbIframeContainer.src = `${this.ytbIframeUrl}`;
     }
   }
 };

@@ -170,6 +170,43 @@
 <script>
 export default {
   name: "portfolioItem",
+  mounted() {
+    let itemId = this.id;
+    let itemTitle = this.title;
+
+    setPortfolioImg();
+    pushModalImg();
+
+    // push img's in modal
+    function pushModalImg() {
+      for (let i = 1; i < 99; i++) {
+        try {
+          let imgContainer = document.querySelectorAll(
+            ".portfolio_img-container"
+          )[itemId];
+          let imgElement = document.createElement("img");
+
+          imgElement.src = require(`@/assets/Portfolio/${itemTitle}/img-${i}.png`);
+          imgElement.style.width = "100%";
+          imgElement.style.objectFit = "contain";
+
+          imgContainer.appendChild(imgElement);
+          if (i > 1) {
+            imgElement.style.display = "none";
+          }
+        } catch {
+          i = 999;
+        }
+      }
+    }
+
+    // define the portfolio img
+    function setPortfolioImg() {
+      let imgContainer = document.querySelectorAll(".portfolio-item")[itemId];
+      imgContainer.style.backgroundImage =
+        "url(" + require(`@/assets/Portfolio/${itemTitle}/img-intro.png`) + ")";
+    }
+  },
   props: {
     id: {
       type: Number,

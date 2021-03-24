@@ -1,10 +1,5 @@
 <template>
-  <!-- portfolio item -->
-  <div
-    :style="`background-image: url(${getAssetPath(img)})`"
-    class="portfolio-item"
-    v-on:click="displayModal(id)"
-  >
+  <div class="portfolio-item" v-on:click="displayModal()">
     <!-- content -->
     <div class="portfolio-item__content">
       <svg
@@ -35,12 +30,14 @@
     <div class="portfolio-modal">
       <!-- header -->
       <div class="portfolio-modal__header">
-        <h1>
-          {{ title }}
-        </h1>
+        <div class="portfolio-modal__header__title">
+          <h1>
+            {{ title }}
+          </h1>
+        </div>
         <div class="portfolio-modal__header__nextPrev">
           <svg
-            v-on:click="prevProject(id)"
+            v-on:click="prevProject"
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
@@ -53,7 +50,7 @@
             ></path>
           </svg>
           <svg
-            v-on:click="nextProject(id)"
+            v-on:click="nextProject"
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
@@ -66,25 +63,56 @@
             ></path>
           </svg>
         </div>
-        <svg
-          v-on:click="closeModal(id)"
-          aria-hidden="true"
-          focusable="false"
-          data-prefix="fas"
-          data-icon="times"
-          role="img"
-          viewBox="0 0 352 512"
-        >
-          <path
-            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
-          ></path>
-        </svg>
+        <div class="portfolio-modal__header__close">
+          <svg
+            v-on:click="closeModal()"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="times"
+            role="img"
+            viewBox="0 0 352 512"
+          >
+            <path
+              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+            ></path>
+          </svg>
+        </div>
       </div>
       <!-- content -->
       <div class="portfolio-modal__content">
         <!-- left -->
         <div class="portfolio-modal__content__left">
-          <img :src="getAssetPath(img)" alt="" />
+          <svg
+            v-on:click="prevImgCarouselModal"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            id="chevron-left"
+            data-icon="chevron-left"
+            role="img"
+            viewBox="0 0 320 512"
+          >
+            <path
+              d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+            ></path>
+          </svg>
+          <!-- generated js DOM -->
+          <div class="portfolio_img-container"></div>
+          <svg
+            v-on:click="nextImgCarouselModal"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            id="chevron-right"
+            data-icon="chevron-right"
+            role="img"
+            viewBox="0 0 320 512"
+          >
+            <path
+              d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+            ></path>
+          </svg>
         </div>
         <!-- right -->
         <div class="portfolio-modal__content__right">
@@ -252,10 +280,6 @@ export default {
       type: String,
       required: true
     },
-    img: {
-      type: String,
-      required: true
-    },
     description: {
       type: String,
       required: true
@@ -381,16 +405,17 @@ export default {
       }, 300);
     },
     // prev project
-    prevProject(projectId) {
+    prevProject: function() {
+      let itemId = this.id;
       // substracted 1 on maxItems since the indexes of portfolio items start at 0
       const maxItems = document.querySelectorAll(".portfolio-item").length - 1;
 
-      this.closeModal(projectId);
+      this.closeModal();
       setTimeout(() => {
-        if (projectId === 0) {
+        if (itemId === 0) {
           this.displayModal(maxItems);
         } else {
-          this.displayModal(projectId - 1);
+          this.displayModal(itemId - 1);
         }
       }, 300);
     }
@@ -414,10 +439,13 @@ export default {
     cursor: pointer;
     ::before {
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.07);
+      background-color: rgba(255, 255, 255, 0.1);
+      z-index: 9;
     }
     svg {
+      transition: all 500ms ease-in-out;
       opacity: 100%;
+      z-index: 99;
     }
   }
   ::before {
@@ -481,28 +509,22 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: white;
-  width: 44%;
-  padding: 7px;
-  border-bottom: 5px solid rgb(138, 50, 209);
+  border-bottom: 7px solid rgb(138, 50, 209);
   transition: all 300ms ease-in-out;
   margin-top: 110em;
 
   // header
   &__header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     letter-spacing: 1px;
-    margin-bottom: 7px;
-    padding: 4px 10px;
+    margin: 3px;
+    padding: 5px 17px 7px 14px;
     background-color: rgb(166, 55, 230);
     color: white;
 
-    h1 {
-      font-size: 1.15em;
-    }
     svg {
-      width: 15px;
+      width: 19px;
       fill: rgb(255, 255, 255);
       &:hover {
         cursor: pointer;
@@ -510,13 +532,27 @@ export default {
       }
     }
 
+    &__title {
+      display: flex;
+      justify-content: flex-start;
+      width: 40%;
+      h1 {
+        font-size: 1.27em;
+      }
+    }
     &__nextPrev {
       display: flex;
-
+      justify-content: center;
+      width: 20%;
       svg {
-        width: 10px;
+        width: 13px;
         margin: 0 5px;
       }
+    }
+    &__close {
+      display: flex;
+      justify-content: flex-end;
+      width: 40%;
     }
   }
 
@@ -525,32 +561,71 @@ export default {
     display: flex;
     // left
     &__left {
-      width: 60%;
+      width: 73%;
+      position: relative;
       img {
-        width: 100%;
+        width: 5%;
+      }
+
+      svg {
+        position: absolute;
+        fill: rgb(140, 67, 223);
+        width: 40px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 0.1em;
+        padding: 7px 5px;
+        &:hover {
+          transition: all 250ms ease-in-out;
+          background-color: rgba(0, 0, 0, 0.25);
+          fill: rgb(255, 255, 255);
+        }
+      }
+      #chevron-left {
+        left: 0;
+        margin-left: 15px;
+      }
+      #chevron-right {
+        right: 0;
+        margin-right: 15px;
+      }
+      .portfolio_img-container {
+        display: flex;
       }
     }
     // right
     &__right {
-      width: 40%;
+      width: 27%;
       padding: 0 10px;
       h2 {
-        font-size: 1.17em;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-        padding-top: 7px;
+        font-size: 1.1em;
+        padding-top: 10px;
         padding-bottom: 3px;
-        margin-bottom: 5px;
+        color: rgb(135, 67, 175);
       }
       div {
-        line-height: 25px;
+        line-height: 30px;
       }
       &__description {
         height: 50%;
+        p {
+          color: rgb(119, 51, 158);
+          font-size: 1.15em;
+          width: 90%;
+          padding-left: 8px;
+          padding-bottom: 4px;
+          border-left: 3px solid rgb(155, 76, 201);
+        }
       }
       &__technologies {
         height: 40%;
         img {
-          margin: 5px 8px;
+          margin: 7px 10px;
+          &:hover {
+            transition: all 500ms ease-in-out;
+            transform: rotateY(360deg);
+          }
         }
       }
       &__informations {

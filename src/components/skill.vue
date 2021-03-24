@@ -112,67 +112,97 @@ export default {
       front: [
         {
           icon: "VUEJS_icon.png",
-          name: "Vue.js",
+          name: "Vue.js & CLI",
           name_color: "#00BC32",
-          perc: 50
+          percent: 45
         },
         {
           icon: "HTMLCSS_icon.png",
-          name: "HTML/CSS",
+          name: "HTML5 / CSS3",
           name_color: "#448FFF",
-          perc: 85
+          percent: 85
         },
         {
           icon: "JS_icon.png",
           name: "Javascript",
           name_color: "yellow",
-          perc: 70
+          percent: 55
         },
         {
           icon: "BOOTSTRAP_icon.png",
           name: "Bootstrap",
           name_color: "#FFFFFF",
-          perc: 70
+          percent: 70
+        },
+        {
+          icon: "SASS_icon.png",
+          name: "Sass",
+          name_color: "#FF9CC3",
+          percent: 80
         }
       ],
       back: [
         {
-          icon: "HTMLCSS_icon.png",
-          name: "HTML/CSS",
-          name_color: "#448FFF",
-          perc: 85
-        },
-        {
-          icon: "VUEJS_icon.png",
-          name: "Vue.js",
+          icon: "NODEJS_icon.png",
+          name: "Node.js",
           name_color: "#00BC32",
-          perc: 50
+          percent: 35
         },
         {
-          icon: "JS_icon.png",
-          name: "Javascript",
-          name_color: "yellow",
-          perc: 70
+          icon: "MYSQL_icon.png",
+          name: "MySQL",
+          name_color: "#8799F5",
+          percent: 50
+        },
+        {
+          icon: "MONGODB_icon.png",
+          name: "MongoDB",
+          name_color: "#A6FC90",
+          percent: 75
+        },
+        {
+          icon: "MONGOOSEJS.png",
+          name: "Mongoose.js",
+          name_color: "#9A1212",
+          percent: 75
+        },
+        {
+          icon: "EXPRESSJS_icon.png",
+          name: "Express.js",
+          name_color: "white",
+          percent: 75
         }
       ],
       tools: [
         {
-          icon: "JS_icon.png",
-          name: "Javascript",
+          icon: "GIT_icon.png",
+          name: "Git/Github",
+          name_color: "white",
+          percent: 70
+        },
+        {
+          icon: "JOI_icon.png",
+          name: "Joi",
           name_color: "yellow",
-          perc: 70
+          percent: 35
         },
         {
-          icon: "VUEJS_icon.png",
-          name: "Vue.js",
-          name_color: "#00BC32",
-          perc: 50
+          icon: "ESLINT_icon.png",
+          name: "ESLint",
+          name_color: "#22269B",
+          percent: 65
         },
         {
-          icon: "HTMLCSS_icon.png",
-          name: "HTML/CSS",
-          name_color: "#448FFF",
-          perc: 85
+          icon: "CHAI_icon.png",
+          name: "Chai",
+          name_color: "#981C1C",
+          percent: 35
+        },
+        {
+          icon: "PRETTIER_icon.png",
+          name: "Prettier",
+          name_color: "#5199C3",
+          percent: 35
         }
       ]
     };

@@ -11,8 +11,8 @@
 
     <!-- bottom -->
     <div class="skill-item__bottom">
-      <div :style="`width: ${perc}%`"></div>
-      <p>{{ perc }} %</p>
+      <div :style="`width: ${percent}%`"></div>
+      <p>{{ percent }} %</p>
     </div>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
       type: String,
       required: true
     },
-    perc: {
+    percent: {
       type: Number,
       required: true
     }

@@ -71,7 +71,7 @@
           :icon="skill.icon"
           :name="skill.name"
           :nameColor="skill.name_color"
-          :perc="skill.perc"
+          :percent="skill.percent"
         />
       </div>
       <!-- back container -->
@@ -83,7 +83,7 @@
           :icon="skill.icon"
           :name="skill.name"
           :nameColor="skill.name_color"
-          :perc="skill.perc"
+          :percent="skill.percent"
         />
       </div>
       <!-- tools container -->
@@ -95,7 +95,7 @@
           :icon="skill.icon"
           :name="skill.name"
           :nameColor="skill.name_color"
-          :perc="skill.perc"
+          :percent="skill.percent"
         />
       </div>
     </article>

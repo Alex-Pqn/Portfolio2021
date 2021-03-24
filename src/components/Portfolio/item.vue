@@ -266,13 +266,16 @@ export default {
       }, 150);
     },
     // close modal
-    closeModal: function(containerId) {
-      let modalContainer = document.querySelectorAll(".modal-container")[
-        containerId
-      ];
-      let modal = modalContainer.childNodes[1].style;
+    closeModal: function() {
+      let itemId = this.id;
 
-      modal.setProperty("margin-top", "110em");
+      let modalContainer = document.querySelectorAll(".modal-container")[
+        itemId
+      ];
+      let portfolioModal = document.querySelectorAll(".portfolio-modal")[itemId]
+        .style;
+
+      portfolioModal.setProperty("margin-top", "110em");
       setTimeout(() => {
         modalContainer.style.setProperty("display", "none");
       }, 300);

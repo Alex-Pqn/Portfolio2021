@@ -43,72 +43,100 @@ export default {
     return {
       items: [
         {
-          title: "Mon CV 1",
-          img: "CV.png",
-          description:
-            "Le projassrooms consistait à créer son propre CV sous foeb à l'aide du HTML et CSS seulement.",
+          title: "Mon site",
+          description: "Mon site Front & back",
           technologies: {
-            HTMLCSS: true
+            HTMLCSS: true,
+            JS: true,
+            VUEJS: true,
+            SASS: true
           },
-          githubUrl: "https://github.com/Alex-Pqn?tab=repositories",
-          siteUrl: "https://github.com/Alex-Pqn?tab=repositories"
+          githubUrl: "https://github.com/Alex-Pqn/portfolio",
+          siteUrl: "https://github.com/Alex-Pqn/portfolio"
         },
         {
-          title: "Mon CV 2",
-          img: "CV.png",
-          description:
-            "sistait à créer son propre CV sous forme d'une page web à l'a HTML et CSS seulement.",
+          title: "Launcher pour un jeu-vidéo",
+          description: "Launcher pour un jeu-vidéo",
           technologies: {
+            SASS: true,
             HTMLCSS: true,
             JS: true
           },
-          githubUrl: "https://github.com/Alex-Pqn?tab=repositories",
-          siteUrl: "https://github.com/Alex-Pqn?tab=repositories"
+          githubUrl: "https://github.com/Alex-Pqn/marie-madeleine-launcher",
+          siteUrl:
+            "https://github.com/Alex-Pqn/marie-madeleine-launcher/releases"
         },
         {
-          title: "Mon CV 3",
-          img: "CV.png",
-          description:
-            "Le projet 2 Openms consistait à créer son proprpage web à l'aide du HTML et CSS seulement.",
+          title: "Réseau social d'entreprise",
+          description: "Projet 7 Openclassrooms: Front & back",
           technologies: {
             HTMLCSS: true,
-            BOOTSTRAP: true
-          },
-          githubUrl: "https://github.com/Alex-Pqn?tab=repositories",
-          siteUrl: "https://github.com/Alex-Pqn?tab=repositories"
-        },
-        {
-          title: "Mon CV 4",
-          img: "CV.png",
-          description:
-            "Le projet à créer son propre CV sous forme d'une page web à l'aide du HTML et CSS seulement.",
-          technologies: {
-            VUEJS: true
-          },
-          githubUrl: "https://github.com/Alex-Pqn?tab=repositories",
-          siteUrl: "https://github.com/Alex-Pqn?tab=repositories"
-        },
-        {
-          title: "Mon CV 5",
-          img: "CV.png",
-          description:
-            "Le projet 2 OpenClassrooms consiste d'une page web à l'aide du HTML et CSS seulement.",
-          technologies: {
-            HTMLCSS: true
-          },
-          githubUrl: "https://github.com/Alex-Pqn?tab=repositories",
-          siteUrl: "https://github.com/Alex-Pqn?tab=repositories"
-        },
-        {
-          title: "Mon CV 6",
-          img: "CV.png",
-          description:
-            "Le projet 2 OpenClassrooms consistait à créer son propre CV sous form",
-          technologies: {
+            VUEJS: true,
+            SASS: true,
+            NODEJS: true,
+            MYSQL: true,
+            EXPRESSJS: true,
             JS: true
           },
-          githubUrl: "https://github.com/Alex-Pqn?tab=repositories",
-          siteUrl: "https://github.com/Alex-Pqn?tab=repositories"
+          githubUrl: "https://github.com/Alex-Pqn/project7ocr",
+          siteUrl: "https://github.com/Alex-Pqn/project7ocr"
+        },
+        {
+          title: "Application d'évaluation de sauces piquantes",
+          description: "Projet 6 Openclassrooms: Back",
+          technologies: {
+            EXPRESSJS: true,
+            MONGOOSEJS: true,
+            MONGODB: true,
+            NODEJS: true
+          },
+          githubUrl: "https://github.com/Alex-Pqn/project6ocr",
+          siteUrl: "https://github.com/Alex-Pqn/project6ocr"
+        },
+        {
+          title: "Site de vente de matériel photographique",
+          description: "Projet 5 Openclassrooms: Front & Back",
+          technologies: {
+            HTMLCSS: true,
+            MONGOOSEJS: true,
+            EXPRESSJS: true,
+            SASS: true,
+            JS: true
+          },
+          githubUrl: "https://github.com/Alex-Pqn/project5ocr",
+          siteUrl: "https://github.com/Alex-Pqn/project5ocr"
+        },
+        {
+          title: "Site d'une agence de web design",
+          description: "Projet 4 Openclassrooms: Front SEO/Accésibilité",
+          technologies: {
+            JS: true,
+            BOOTSTRAP: true,
+            HTMLCSS: true
+          },
+          githubUrl: "https://github.com/Alex-Pqn/project4ocr",
+          siteUrl: "https://github.com/Alex-Pqn/project4ocr"
+        },
+        {
+          title: "Application de restauration gastronomique",
+          description: "Projet 3 Openclassrooms: Front",
+          technologies: {
+            JS: true,
+            BOOTSTRAP: true,
+            HTMLCSS: true
+          },
+          githubUrl: "https://github.com/Alex-Pqn/project3ocr",
+          siteUrl: "https://github.com/Alex-Pqn/project3ocr"
+        },
+        {
+          title: "Réalisation de mon CV",
+          description: "Projet 2 Openclassrooms: Front",
+          technologies: {
+            BOOTSTRAP: true,
+            HTMLCSS: true
+          },
+          githubUrl: "https://github.com/Alex-Pqn/CV",
+          siteUrl: "https://github.com/Alex-Pqn/CV"
         }
       ]
     };

@@ -271,6 +271,11 @@ export default {
       type: String
     }
   },
+  data() {
+    return {
+      indexCurrentImg: 0
+    };
+  },
   methods: {
     // get asset path on skill folder
     getAssetPathSkill: function(icon) {

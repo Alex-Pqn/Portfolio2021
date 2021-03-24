@@ -236,8 +236,13 @@ export default {
     }
   },
   methods: {
-    getAssetPath: function(icon) {
-      return require(`@/assets/${icon}`);
+    // get asset path on skill folder
+    getAssetPathSkill: function(icon) {
+      return require(`@/assets/Skill/${icon}`);
+    },
+    // get asset path on portfolio folder
+    getAssetPathPortfolio: function(icon) {
+      return require(`@/assets/Portfolio/${icon}`);
     },
     // display modal
     displayModal: function(containerId) {

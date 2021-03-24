@@ -102,27 +102,63 @@
             </h2>
             <img
               v-if="technologies.HTMLCSS"
-              :src="getAssetPath('HTMLCSS_icon.png')"
-              title="HTML/CSS"
-              alt="HTMLCSS icon"
+              :src="getAssetPathSkill('HTMLCSS_icon.png')"
+              title="HTML5/CSS3"
+              alt="HTML/CSS icon"
             />
             <img
               v-if="technologies.VUEJS"
-              :src="getAssetPath('VUEJS_icon.png')"
+              :src="getAssetPathSkill('VUEJS_icon.png')"
               title="Vue.js"
-              alt=""
+              alt="Vue.js icon"
             />
             <img
               v-if="technologies.JS"
-              :src="getAssetPath('JS_icon.png')"
+              :src="getAssetPathSkill('JS_icon.png')"
               title="Javascript"
-              alt=""
+              alt="Javascript icon"
             />
             <img
               v-if="technologies.BOOTSTRAP"
-              :src="getAssetPath('BOOTSTRAP_icon.png')"
+              :src="getAssetPathSkill('BOOTSTRAP_icon.png')"
               title="Bootstrap"
-              alt=""
+              alt="Bootstrap icon"
+            />
+            <img
+              v-if="technologies.MONGODB"
+              :src="getAssetPathSkill('MONGODB_icon.png')"
+              title="MongoDB"
+              alt="MongoDB icon"
+            />
+            <img
+              v-if="technologies.MONGOOSEJS"
+              :src="getAssetPathSkill('MONGOOSEJS.png')"
+              title="Mongoose.js"
+              alt="Mongoose.js icon"
+            />
+            <img
+              v-if="technologies.MYSQL"
+              :src="getAssetPathSkill('MYSQL_icon.png')"
+              title="MySQL"
+              alt="MySQL icon"
+            />
+            <img
+              v-if="technologies.NODEJS"
+              :src="getAssetPathSkill('NODEJS_icon.png')"
+              title="NodeJS"
+              alt="NodeJS icon"
+            />
+            <img
+              v-if="technologies.SASS"
+              :src="getAssetPathSkill('SASS_icon.png')"
+              title="Sass"
+              alt="Sass icon"
+            />
+            <img
+              v-if="technologies.EXPRESSJS"
+              :src="getAssetPathSkill('EXPRESSJS_icon.png')"
+              title="Express.js"
+              alt="Express.js icon"
             />
           </div>
           <div class="portfolio-modal__content__right__informations">

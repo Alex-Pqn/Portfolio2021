@@ -19,9 +19,7 @@
       </div>
       <!-- description -->
       <div class="formation-item__content__description">
-        <p>
-          {{ description }}
-        </p>
+        <p>{{ description }} —</p>
       </div>
     </div>
     <!-- img -->
@@ -135,6 +133,9 @@ export default {
       width: 150px;
       border-radius: 50%;
       border: 5px solid $timeline_formation-part;
+      &:hover {
+        border-width: 3px;
+      }
     }
   }
 }

@@ -51,8 +51,8 @@ export default {
 .skill-item {
   display: flex;
   flex-direction: column;
-  margin: 25px 0;
-  width: 700px;
+  margin: 23px 0;
+  width: 680px;
 
   // top
   &__top {
@@ -60,8 +60,8 @@ export default {
     align-items: center;
     margin-bottom: 17px;
     p {
-      font-size: 1.4em;
-      margin-left: 12px;
+      font-size: 1.45em;
+      margin-left: 15px;
     }
   }
 

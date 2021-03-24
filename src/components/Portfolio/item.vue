@@ -245,15 +245,24 @@ export default {
       return require(`@/assets/Portfolio/${icon}`);
     },
     // display modal
-    displayModal: function(containerId) {
+    displayModal: function(prevNextItemId) {
+      let itemId;
+
+      if (prevNextItemId == undefined) {
+        itemId = this.id;
+      } else {
+        itemId = prevNextItemId;
+      }
+
       let modalContainer = document.querySelectorAll(".modal-container")[
-        containerId
+        itemId
       ];
-      let modal = modalContainer.childNodes[1].style;
+      let portfolioModal = document.querySelectorAll(".portfolio-modal")[itemId]
+        .style;
 
       modalContainer.style.setProperty("display", "flex");
       setTimeout(() => {
-        modal.setProperty("margin-top", "-8em");
+        portfolioModal.setProperty("margin-top", "-8em");
       }, 150);
     },
     // close modal

@@ -262,10 +262,10 @@ export default {
 .skill {
   text-align: center;
   position: relative;
-  scroll-margin-top: 8rem;
-  height: 90vh;
+  scroll-margin-top: 1.7rem;
   font-family: "Syne", sans-serif;
   z-index: 999;
+  padding-bottom: 35px;
   background-image: radial-gradient(
       circle at 10% 0%,
       #734a75 0%,
@@ -312,12 +312,13 @@ export default {
 
   // top
   &__top {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
     svg {
       margin-top: -15px;
       width: 45px;
       fill: white;
+      z-index: 999;
     }
   }
 
@@ -325,7 +326,7 @@ export default {
   &__middle {
     justify-content: center;
     position: relative;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
     button {
       padding: 7px;

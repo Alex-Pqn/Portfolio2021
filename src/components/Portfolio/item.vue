@@ -321,6 +321,28 @@ export default {
         modalContainer.style.setProperty("display", "none");
       }, 300);
     },
+    // display the next img in the modal carousel
+    nextImgCarouselModal() {
+      let itemId = this.id;
+      let containerImg = document.querySelectorAll(".portfolio_img-container")[
+        itemId
+      ].childNodes;
+      let containerImgLength = containerImg.length - 1;
+      const firstImgIndex = 0;
+
+      // display none the current img
+      containerImg[this.indexCurrentImg].style.display = "none";
+
+      // if last img > define the index of first img (for infinite carousel)
+      if (this.indexCurrentImg === containerImgLength) {
+        this.indexCurrentImg = firstImgIndex;
+      } else {
+        this.indexCurrentImg++;
+      }
+
+      // display flex the next img
+      containerImg[this.indexCurrentImg].style.display = "flex";
+    },
     // next project
     nextProject(projectId) {
       // substracted 1 on maxItems since the indexes of portfolio items start at 0

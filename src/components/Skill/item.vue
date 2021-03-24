@@ -1,7 +1,6 @@
 <template>
   <!-- skill item -->
   <div class="skill-item">
-    
     <!-- top -->
     <div class="skill-item__top">
       <img :src="getAssetPath(icon)" alt="" />
@@ -9,7 +8,7 @@
         {{ name }}
       </p>
     </div>
-    
+
     <!-- bottom -->
     <div class="skill-item__bottom">
       <div :style="`width: ${perc}%`"></div>
@@ -41,7 +40,7 @@ export default {
   },
   methods: {
     getAssetPath: function(icon) {
-      return require(`@/assets/${icon}`);
+      return require(`@/assets/Skill/${icon}`);
     }
   }
 };

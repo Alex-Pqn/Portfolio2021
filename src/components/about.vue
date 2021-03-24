@@ -17,12 +17,7 @@
       @mouseenter="displayHobbie('hobbie-video_drone')"
       @mouseleave="closeHobbie('hobbie-video_drone')"
     >
-      <video autoplay loop muted>
-        <source
-          src="@/assets/drone_hobbie-video-400x400.mp4"
-          type="video/mp4"
-        />
-      </video>
+      <img src="@/assets/About/drone_hobbie-img-400x400.jpg" alt="" />
       <p>
         Drone
         <svg viewBox="0 0 512 512">
@@ -81,7 +76,7 @@
     <!-- profile pic -->
     <div class="profile-pic">
       <img
-        src="@/assets/testimg.png"
+        src="@/assets/About/testimg.png"
         alt=""
         data-aos="fade-up-left"
         data-aos-duration="600"

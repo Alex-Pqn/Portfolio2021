@@ -2,7 +2,10 @@
   <!-- cv container -->
   <section class="cv" id="cv">
     <video autoplay loop muted>
-      <source src="@/assets/drone_hobbie-video-1920x750.mp4" type="video/mp4" />
+      <source
+        src="@/assets/About/drone_hobbie-video-1920x750.mp4"
+        type="video/mp4"
+      />
     </video>
 
     <!-- icon -->

@@ -68,7 +68,7 @@ export default {
   },
   methods: {
     getAssetPath: function(icon) {
-      return require(`@/assets/${icon}`);
+      return require(`@/assets/Formation/${icon}`);
     }
   }
 };

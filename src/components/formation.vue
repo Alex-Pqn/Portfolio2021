@@ -61,14 +61,14 @@ export default {
           link: "https://www.francecompetences.fr/recherche/rncp/32173/",
           name: "Bac +2 Développeur Web",
           img: "OpenClassrooms_icon.jpg",
-          description: "Certification RNCP de niveau 5 OpenClassrooms.",
+          description: "Certification RNCP de niveau 5 OpenClassrooms",
           date: "2020-2021"
         },
         {
           link: "https://lasaulaie.ent.auvergnerhonealpes.fr/",
           name: "2nd en Bac Pro MELEC",
           img: "Lycee_icon.jpg",
-          description: "2nd en Bac PRO MELEC au lycée la Saulaie.",
+          description: "2nd en Bac PRO MELEC au lycée la Saulaie",
           date: "2019-2020"
         },
         {
@@ -76,7 +76,7 @@ export default {
           name: "Brevet des collèges",
           img: "College_icon.jpg",
           description:
-            "Diplôme national du brevet des collèges à Béatrice de Savoie, Les Echelles.",
+            "Diplôme national du brevet des collèges à Béatrice de Savoie, Les Echelles",
           date: "2019"
         },
         {
@@ -84,7 +84,7 @@ export default {
           name: "Stage en informatique",
           img: "GC-Informatique_icon.jpg",
           description:
-            "Stage d'observation de 4ème à GC Informatique, à les Echelles.",
+            "Stage d'observation de 4ème à GC Informatique, à les Echelles",
           date: "2018"
         }
       ]

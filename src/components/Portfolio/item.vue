@@ -343,6 +343,28 @@ export default {
       // display flex the next img
       containerImg[this.indexCurrentImg].style.display = "flex";
     },
+    // display the last img in the modal carousel
+    prevImgCarouselModal() {
+      let itemId = this.id;
+      let containerImg = document.querySelectorAll(".portfolio_img-container")[
+        itemId
+      ].childNodes;
+      let containerImgLength = containerImg.length - 1;
+      const firstImgIndex = 0;
+
+      // display none the current img
+      containerImg[this.indexCurrentImg].style.display = "none";
+
+      // if first img > define the index of last img (for infinite carousel)
+      if (this.indexCurrentImg === firstImgIndex) {
+        this.indexCurrentImg = containerImgLength;
+      } else {
+        this.indexCurrentImg--;
+      }
+
+      // display flex the prev img
+      containerImg[this.indexCurrentImg].style.display = "flex";
+    },
     // next project
     nextProject(projectId) {
       // substracted 1 on maxItems since the indexes of portfolio items start at 0

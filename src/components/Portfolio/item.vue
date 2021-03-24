@@ -366,16 +366,17 @@ export default {
       containerImg[this.indexCurrentImg].style.display = "flex";
     },
     // next project
-    nextProject(projectId) {
+    nextProject: function() {
+      let itemId = this.id;
       // substracted 1 on maxItems since the indexes of portfolio items start at 0
       const maxItems = document.querySelectorAll(".portfolio-item").length - 1;
 
-      this.closeModal(projectId);
+      this.closeModal();
       setTimeout(() => {
-        if (projectId == maxItems) {
+        if (itemId === maxItems) {
           this.displayModal(0);
         } else {
-          this.displayModal(projectId + 1);
+          this.displayModal(itemId + 1);
         }
       }, 300);
     },

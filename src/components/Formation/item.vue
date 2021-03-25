@@ -64,7 +64,9 @@ export default {
     let itemId = this.id;
     if (!Number.isInteger(itemId / 2)) {
       let itemContainer = document.querySelectorAll(".formation-item")[itemId];
-      let itemContent = itemContainer.childNodes[1];
+      let itemContent = document.querySelectorAll(".formation-item__content")[
+        itemId
+      ];
 
       itemContent.style.textAlign = "left";
       itemContainer.style.flexDirection = "row-reverse";

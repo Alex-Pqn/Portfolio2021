@@ -209,6 +209,12 @@ export default {
         width: 80px;
         margin: 8px 25px 0 35px;
       }
+      @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        font-size: 3.2em;
+        svg {
+          width: 70px;
+        }
+      }
     }
   }
 

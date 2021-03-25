@@ -133,10 +133,16 @@ export default {
   align-items: center;
   scroll-margin-top: 7.3em;
   padding: 50px 0;
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    padding-bottom: 40px;
+  }
 
   // content
   &__content {
     width: 50%;
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+      width: 65%;
+    }
     // title
     &__title {
       display: flex;

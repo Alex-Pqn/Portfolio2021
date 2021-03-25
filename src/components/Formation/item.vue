@@ -90,6 +90,20 @@ export default {
   margin-top: 35px;
   margin-bottom: 20px;
   z-index: 10;
+  @media screen and (min-width: 1440px) and (max-width: 1900px) {
+    width: 60%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1280px) and (max-width: 1439px) {
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    width: 80%;
+    margin-top: 45px;
+  }
 
   // content
   &__content {
@@ -101,7 +115,7 @@ export default {
     // date
     &__date {
       p {
-        font-size: 1.4em;
+        font-size: 1.45em;
         line-height: 17px;
         color: rgb(160, 50, 194);
         & span {
@@ -112,15 +126,15 @@ export default {
     // name
     &__name {
       p {
-        line-height: 48px;
-        font-size: 1.65em;
+        padding: 5px 0;
+        font-size: 1.68em;
         color: rgb(176, 56, 212);
       }
     }
     // description
     &__description {
       p {
-        font-size: 1.25em;
+        font-size: 1.35em;
         color: rgb(0, 0, 0);
       }
     }

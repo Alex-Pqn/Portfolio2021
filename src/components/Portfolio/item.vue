@@ -512,6 +512,10 @@ export default {
   border-bottom: 7px solid rgb(138, 50, 209);
   transition: all 300ms ease-in-out;
   margin-top: 110em;
+  max-width: 80%;
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    max-width: 95%;
+  }
 
   // header
   &__header {
@@ -563,6 +567,7 @@ export default {
     &__left {
       width: 73%;
       position: relative;
+
       img {
         width: 5%;
       }

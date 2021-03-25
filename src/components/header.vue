@@ -51,17 +51,17 @@ export default {
     // fixed header
     function displayFixedHeader() {
       const headerDisplayDistance = 700;
-      const headerElement = document.querySelector("#header-fixed");
+      const headerFixer = document.querySelector("#header-fixed");
 
       if (
         document.body.scrollTop >= headerDisplayDistance ||
         document.documentElement.scrollTop >= headerDisplayDistance
       ) {
-        headerElement.style.opacity = 1;
-        headerElement.style.width = "100%";
+        headerFixer.style.opacity = 1;
+        headerFixer.style.width = "100%";
       } else {
-        headerElement.style.opacity = 0;
-        headerElement.style.width = "60%";
+        headerFixer.style.opacity = 0;
+        headerFixer.style.width = "0%";
       }
     }
   }
@@ -95,14 +95,13 @@ header {
     display: flex;
     letter-spacing: 2px;
     margin-left: 25px;
-    width: 50%;
   }
   // nav
   nav {
     display: flex;
     justify-content: flex-end;
     margin-right: 25px;
-    width: 50%;
+    width: 100%;
     ul {
       display: flex;
       li {
@@ -150,7 +149,7 @@ header {
   background-color: white;
   border-bottom: 1px solid $border_header_scrollbar;
   position: fixed;
-  width: 60%;
+  width: 0%;
   opacity: 0;
   transition-duration: 500ms;
   z-index: 9999;

@@ -77,6 +77,7 @@ export default {
   &__title {
     margin: 40px 0 45px;
     z-index: 999;
+    text-align: center;
     h1 {
       font-size: 4.5em;
       color: rgba(255, 255, 255, 0.9);
@@ -85,6 +86,9 @@ export default {
         border-top: 8px solid $main-color_cv-part;
         border-left: 8px solid $main-color_cv-part;
         padding-left: 20px;
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        font-size: 4.2em;
       }
     }
   }

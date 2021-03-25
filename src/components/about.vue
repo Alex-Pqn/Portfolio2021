@@ -193,7 +193,7 @@ export default {
   justify-content: center;
   position: relative;
   scroll-margin-top: 9.7rem;
-  height: 750px;
+  padding-top: 60px;
 }
 
 // profile pic
@@ -205,6 +205,12 @@ export default {
   img {
     height: 700px;
   }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    padding-right: 20px;
+    img {
+      height: 730px;
+    }
+  }
 }
 
 // presentation
@@ -214,6 +220,16 @@ export default {
   width: 25%;
   padding-left: 30px;
   padding-bottom: 45px;
+  @media screen and (min-width: 1280px) and (max-width: 1439px) {
+    width: 37%;
+    padding-left: 25px;
+    padding-bottom: 55px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    width: 50%;
+    padding-left: 15px;
+    padding-bottom: 50px;
+  }
 
   // text
   &__text {
@@ -225,6 +241,21 @@ export default {
       color: rgb(154, 65, 172);
       span {
         font-size: 1.85em;
+      }
+    }
+    @media screen and (min-width: 1440px) and (max-width: 1900px) {
+      p {
+        line-height: 45px;
+        margin: 35px 0;
+      }
+    }
+    @media screen and (min-width: 1280px) and (max-width: 1439px) {
+      p {
+        letter-spacing: 0.8px;
+        margin: 17px 0;
+        span {
+          font-size: 1.85em;
+        }
       }
     }
 
@@ -274,6 +305,14 @@ export default {
       transform: rotate(180deg) scale(0.8);
       fill: rgb(148, 30, 30);
       cursor: pointer;
+    }
+    @media screen and (min-width: 1280px) and (max-width: 1439px) {
+      margin-top: 22px;
+      width: 40px;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+      margin-top: 19px;
+      width: 38px;
     }
   }
 }
@@ -334,6 +373,17 @@ export default {
       width: 50px;
     }
   }
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    height: 340px;
+    width: 340px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    left: -75px;
+    bottom: -120px;
+    p {
+      top: 15.5%;
+    }
+  }
 }
 // hobbie circle : montage video
 #hobbie-montage {
@@ -352,6 +402,26 @@ export default {
       width: 35px;
     }
   }
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    height: 245px;
+    width: 245px;
+    right: 90px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    height: 240px;
+    width: 240px;
+    right: 40px;
+    bottom: -110px;
+    p {
+      font-size: 1.27em;
+      top: 15%;
+      line-height: 37px;
+      svg {
+        height: 27px;
+        width: 27px;
+      }
+    }
+  }
 }
 // decoration circles
 #deco-circle_1 {
@@ -361,6 +431,16 @@ export default {
   left: 190px;
   bottom: -125px;
   z-index: 999;
+  @media screen and (min-width: 1280px) and (max-width: 1439px) {
+    height: 215px;
+    width: 220px;
+    left: 150px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    height: 210px;
+    width: 200px;
+    left: 130px;
+  }
 }
 #deco-circle_2 {
   background-color: rgb(132, 81, 134);
@@ -380,5 +460,15 @@ export default {
   width: 185px;
   right: 340px;
   bottom: -90px;
+  @media screen and (min-width: 1280px) and (max-width: 1439px) {
+    height: 160px;
+    width: 160px;
+    right: 265px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    height: 170px;
+    width: 170px;
+    right: 200px;
+  }
 }
 </style>

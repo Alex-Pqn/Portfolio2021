@@ -1,11 +1,21 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import cv from "../views/cv.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
     component: Home
+  },
+  {
+    path: "/cv",
+    name: "cv",
+    component: cv
+  },
+  {
+    path: "/:pathMatch(.*)",
+    redirect: "/"
   }
   // {
   //   path: "/about",

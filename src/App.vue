@@ -2,6 +2,18 @@
   <router-view />
 </template>
 
+<script>
+export default {
+  name: "App",
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: "Default Title",
+    // all titles will be injected into this template
+    titleTemplate: "%s | My Awesome Webapp"
+  }
+};
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -14,10 +26,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-html {
   scroll-behavior: smooth;
 }
 

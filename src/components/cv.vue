@@ -30,9 +30,9 @@
     <!-- download -->
     <div class="cv__download">
       <button>
-        <router-link to="/cv">
+        <a href="/cv">
           Télécharger
-        </router-link>
+        </a>
       </button>
     </div>
   </section>

@@ -26,7 +26,7 @@
           <div class="row">
             <img
               class="principal_pic_responsive"
-              src="@/assets/CV/pic.jpg"
+              src="@/assets/Home/CV/pic.jpg"
               alt="Principal pic"
             />
           </div>
@@ -37,7 +37,7 @@
             <div class="col-lg-12">
               <!-- <img
                 class="principal_pic"
-                src="@/assets/CV/pic.jpg"
+                src="@/assets/Home/CV/pic.jpg"
                 alt="Principal pic"
               /> -->
             </div>

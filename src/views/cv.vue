@@ -18,14 +18,14 @@
   />
 
   <!-- fixed header -->
-  <div class="col-lg-12 header">
+  <div class="col-lg-12 col-sm-12 col-12 header">
     <div class="row">
-      <div class="col-lg-6 header__left text-left">
+      <div class="col-lg-6 col-sm-6 col-6 header__left text-left">
         <a href="/">
           <i class="fas fa-long-arrow-alt-left"></i>
         </a>
       </div>
-      <div class="col-lg-6 header__right align-content-*-center text-right">
+      <div class="col-lg-6 col-sm-6 col-6 header__right text-right">
         <a
           id="pdf-icon"
           target="_blank"
@@ -692,6 +692,7 @@ container [class*="col-"] {
 /* Header */
 
 .header {
+  z-index: 999;
   position: fixed;
   &__left {
     padding-top: 7px;

@@ -74,7 +74,7 @@ export default {
   },
   methods: {
     getAssetPath: function(icon) {
-      return require(`@/assets/Formation/${icon}`);
+      return require(`@/assets/Home/Formation/${icon}`);
     }
   }
 };

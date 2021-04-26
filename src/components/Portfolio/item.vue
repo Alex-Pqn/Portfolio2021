@@ -250,7 +250,7 @@ export default {
           )[itemId];
           let imgElement = document.createElement("img");
 
-          imgElement.src = require(`@/assets/Portfolio/${itemTitle}/img-${i}.png`);
+          imgElement.src = require(`@/assets/Home/Portfolio/${itemTitle}/img-${i}.png`);
           imgElement.style.width = "100%";
           imgElement.style.objectFit = "contain";
 
@@ -268,7 +268,9 @@ export default {
     function setPortfolioImg() {
       let imgContainer = document.querySelectorAll(".portfolio-item")[itemId];
       imgContainer.style.backgroundImage =
-        "url(" + require(`@/assets/Portfolio/${itemTitle}/img-intro.png`) + ")";
+        "url(" +
+        require(`@/assets/Home/Portfolio/${itemTitle}/img-intro.png`) +
+        ")";
     }
   },
   props: {
@@ -303,11 +305,11 @@ export default {
   methods: {
     // get asset path on skill folder
     getAssetPathSkill: function(icon) {
-      return require(`@/assets/Skill/${icon}`);
+      return require(`@/assets/Home/Skill/${icon}`);
     },
     // get asset path on portfolio folder
     getAssetPathPortfolio: function(icon) {
-      return require(`@/assets/Portfolio/${icon}`);
+      return require(`@/assets/Home/Portfolio/${icon}`);
     },
     // display modal
     displayModal: function(prevNextItemId) {

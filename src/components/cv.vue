@@ -3,7 +3,7 @@
   <section class="cv" id="cv">
     <video autoplay loop muted>
       <source
-        src="@/assets/About/drone_hobbie-video-1920x750.mp4"
+        src="@/assets/Home/About/drone_hobbie-video-1920x750.mp4"
         type="video/mp4"
       />
     </video>

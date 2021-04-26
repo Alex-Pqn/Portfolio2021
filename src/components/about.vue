@@ -22,7 +22,7 @@
       data-aos-offset="200"
       v-on:click="displayHobbieVideo()"
     >
-      <img src="@/assets/About/drone_hobbie-img-400x400.jpg" alt="" />
+      <img src="@/assets/Home/About/drone_hobbie-img-400x400.jpg" alt="" />
       <p>
         Drone
         <svg viewBox="0 0 512 512">
@@ -49,7 +49,7 @@
       data-aos-offset="200"
       v-on:click="displayHobbieVideo()"
     >
-      <img src="../assets/About/montage_hobbie-img-400x400.jpg" alt="" />
+      <img src="@/assets/Home/About/montage_hobbie-img-400x400.jpg" alt="" />
       <p>
         Montage Vidéo
         <svg
@@ -101,15 +101,15 @@
     ></div>
 
     <!-- profile pic -->
-    <div class="profile-pic">
+    <!-- <div class="profile-pic">
       <img
-        src="@/assets/About/testimg.png"
+        src="@/assets/Home/About/testimg.png"
         alt=""
         data-aos="fade-up-left"
         data-aos-duration="600"
         data-aos-offset="300"
       />
-    </div>
+    </div> -->
 
     <!-- presentation -->
     <div class="presentation">
@@ -159,7 +159,7 @@ export default {
   data() {
     return {
       ytbIframeUrl:
-        "https://www.youtube-nocookie.com/embed/UrVLw8n9f2Q?vq=hd1080&loop=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&fs=0&color=white"
+        "https://www.youtube-nocookie.com/embed/UrVLw8n9f2Q?vq=hd1080&loop=1&modestbranding=1&showinfo=1&rel=0&iv_load_policy=3&theme=light&fs=1&color=white"
     };
   },
   methods: {
@@ -193,7 +193,6 @@ export default {
   justify-content: center;
   position: relative;
   scroll-margin-top: 9.7rem;
-  padding-top: 60px;
 }
 
 // profile pic
@@ -220,6 +219,7 @@ export default {
   width: 25%;
   padding-left: 30px;
   padding-bottom: 45px;
+  padding-top: 40px;
   @media screen and (min-width: 1280px) and (max-width: 1439px) {
     width: 37%;
     padding-left: 25px;

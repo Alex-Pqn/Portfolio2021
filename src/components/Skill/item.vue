@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     getAssetPath: function(icon) {
-      return require(`@/assets/Skill/${icon}`);
+      return require(`@/assets/Home/Skill/${icon}`);
     }
   }
 };

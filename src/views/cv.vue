@@ -17,6 +17,35 @@
     crossorigin="anonymous"
   />
 
+  <!-- fixed header -->
+  <div class="col-lg-12 header">
+    <div class="row">
+      <div class="col-lg-6 header__left text-left">
+        <a href="/">
+          <i class="fas fa-long-arrow-alt-left"></i>
+        </a>
+      </div>
+      <div class="col-lg-6 header__right align-content-*-center text-right">
+        <a
+          id="pdf-icon"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.dropbox.com/s/nm2s33yfix2788b/CV%20-%20Alexandre%20Paquien.pdf?dl=0"
+        >
+          <i class="fas fa-file-pdf fa-2x"></i>
+        </a>
+        <a
+          id="download-icon"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.dropbox.com/s/nm2s33yfix2788b/CV%20-%20Alexandre%20Paquien.pdf?dl=1"
+        >
+          <i class="fas fa-file-download fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- container -->
   <div class="container">
     <div class="col-lg-12">
@@ -658,6 +687,42 @@ body [class*="col-"] {
 container [class*="col-"] {
   border: 1px solid black;
   border-radius: 3px;
+}
+
+/* Header */
+
+.header {
+  position: fixed;
+  &__left {
+    padding-top: 7px;
+    a i {
+      color: rgb(152, 0, 223);
+      font-size: 2em;
+      &:hover {
+        transition: all 100ms ease-in-out;
+        margin-left: -2px;
+        opacity: 0.6;
+      }
+    }
+  }
+  &__right {
+    padding: 15px 19px;
+    a i {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    #download-icon {
+      color: rgb(165, 165, 165);
+    }
+    #pdf-icon {
+      margin-right: 10px;
+      color: rgb(216, 0, 0);
+    }
+  }
+  a {
+    color: black;
+  }
 }
 
 /* Left Side */
